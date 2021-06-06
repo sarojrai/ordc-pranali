@@ -1,0 +1,50 @@
+[
+  {
+    "model": "notification.CommunicationMode",
+    "pk": 1,
+    "fields": {
+      "code": "SMS",
+      "description": "SMS",
+      "priority": 1,
+      "sequence": 1,
+      "added_on": "2021-01-01 00:00:00",
+      "status": 0.0
+    }
+  },
+  {
+    "model": "notification.CommunicationMode",
+    "pk": 2,
+    "fields": {
+      "code": "WHATSAPP",
+      "description": "WHATSAPP",
+      "priority": 2,
+      "sequence": 2,
+      "added_on": "2021-01-01 00:00:00",
+      "status": 0.0
+    }
+  },
+  {
+    "model": "notification.CommunicationMode",
+    "pk": 3,
+    "fields": {
+      "code": "CALLING",
+      "description": "CALLING",
+      "priority": 3,
+      "sequence": 3,
+      "added_on": "2021-01-01 00:00:00",
+      "status": 0.0
+    }
+  },
+  {
+    "model": "notification.CommunicationMode",
+    "pk": 4,
+    "fields": {
+      "code": "IVR",
+      "description": "IVR",
+      "priority": 4,
+      "sequence": 4,
+      "added_on": "2021-01-01 00:00:00",
+      "status": 0.0
+    }
+  }
+]

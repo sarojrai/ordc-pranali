@@ -1,0 +1,141 @@
+{
+    "basicDetail": {
+        "name": "ORDC3",
+        "source": "MARKETPLACE",
+        "address1": "A-604 SHEETAL COMPLEX",
+        "address2": "Mira-Bhayander",
+        "address3": "Mira Road",
+        "state": "maharashtra",
+        "city": 5,
+        "pincode": "401107",
+        "productCategory": "category1",
+        "salesValue": "10000",
+        "bankDetails": [
+            {
+                "bankName": "SBI",
+                "ifscCode": "SBIN000112",
+                "accountNo": "01279312963"
+            }
+        ],
+        "contactDetails": [
+            {
+                "name": "Nitishkumar kamlesh singh",
+                "contactNo": "9768719444",
+                "email": "nitishkumarsingh71@gmail.com"
+            }
+        ]
+    },
+    "integration": {
+        "brandWebsite": "SHOPIFY",
+        "mktPlaceWebsites": [
+            {
+                "label": "Amazon",
+                "value": "AMAZON",
+                "selected": false
+            },
+            {
+                "label": "Flipkart",
+                "value": "FLIPKART",
+                "selected": false
+            },
+            {
+                "label": "Snapdeal",
+                "value": "SNAPDEAL",
+                "selected": false
+            },
+            {
+                "label": "Myntra",
+                "value": "MYNTRA",
+                "selected": false
+            },
+            {
+                "label": "Any Other (Specify)",
+                "value": "other",
+                "selected": false
+            }
+        ],
+        "warehouseMgmt": "UNI-COMMERCE",
+        "courierPartner": "PICKRR"
+    },
+    "communication": {
+        "modeOfNotification": [
+            {
+                "label": "WHATSAPP",
+                "value": "WHATSAPP",
+                "selected": true
+            },
+            {
+                "label": "SMS",
+                "value": "SMS",
+                "selected": true
+            },
+            {
+                "label": "EMAIL",
+                "value": "EMAIL",
+                "selected": false
+            },
+            {
+                "label": "IVR",
+                "value": "IVR",
+                "selected": false
+            },
+            {
+                "label": "Manual Calling",
+                "value": "MANUAL-CALLING",
+                "selected": false
+            }
+        ],
+        "orderTypes": [
+            {
+                "label": "COD",
+                "value": "COD",
+                "selected": true
+            },
+            {
+                "label": "Pre-Paid",
+                "value": "PRE-PAID",
+                "selected": true
+            }
+        ],
+        "notificationMethod": "ALL-WO-LOGIC",
+        "firstModeOfNotification": "WHATSAPP",
+        "eddCalaculationFeature": true,
+        "noOfReminders": [
+            {
+                "duration": 0,
+                "priority": 0,
+                "number": 0
+            },
+            {
+                "duration": 0,
+                "priority": 0,
+                "number": 0
+            },
+            {
+                "duration": 0,
+                "priority": 0,
+                "number": 0
+            },
+            {
+                "duration": 0,
+                "priority": 0,
+                "number": 0
+            },
+            {
+                "duration": 0,
+                "priority": 0,
+                "number": 0
+            }
+        ],
+        "notificationModePriority": [
+            "SMS",
+            "EMAIL",
+            "MANUAL-CALLING"
+        ],
+        "sequenceNdrShipmentOrders": [
+            "SMS",
+            "EMAIL",
+            "WHATSAPP"
+        ]
+    }
+}

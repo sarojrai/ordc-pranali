@@ -1,0 +1,28 @@
+[
+{
+    "model": "notification.communicationchannel",
+    "pk": 1,
+    "fields": {
+        "mode": 1,
+        "code": "Gupshup",
+        "description": "SMS",
+        "url": "www.gupshup.com",
+        "credentials": "{\"username\": ordcinfo, \"password\": 123456}",
+        "added_on": "2021-05-22T07:16:59.705",
+        "status": 0.0
+    }
+},
+{
+    "model": "notification.communicationchannel",
+    "pk": 2,
+    "fields": {
+        "mode": 2,
+        "code": "WHATSAPP",
+        "description": "WHATSAPP",
+        "url": "www.whatsapp.com",
+        "credentials": "{\"username\": ordcinfo, \"password\": 123456}",
+        "added_on": "2021-05-22T07:16:59.705",
+        "status": 0.0
+    }
+}
+]

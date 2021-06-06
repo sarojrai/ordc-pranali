@@ -1,0 +1,171 @@
+[
+  {
+    "model": "customer.AddressType",
+    "pk": 1,
+    "fields": {
+      "name": "Head Quater",
+      "code": "HQ"
+    }
+  },
+  {
+    "model": "customer.AddressType",
+    "pk": 2,
+    "fields": {
+      "name": "Registered Office",
+      "code": "REG"
+    }
+  },
+  {
+    "model": "customer.AddressType",
+    "pk": 3,
+    "fields": {
+      "name": "Billing Office",
+      "code": "BILL"
+    }
+  },
+  {
+    "model": "customer.AddressType",
+    "pk": 4,
+    "fields": {
+      "name": "Shipping Office",
+      "code": "SHIP"
+    }
+  },
+  {
+    "model": "customer.GSTServiceType",
+    "pk": 1,
+    "fields": {
+      "service_type": "Other",
+      "service_code": "OTHER",
+      "sac_code":"SAC-Other",
+      "hsn_code":"HSN-Other",
+      "tax_rate":12.0,
+      "status":1.0,
+      "added_on":"2019-01-01 00:00:00",
+      "updated_on":"2019-01-01 00:00:00"
+    }
+  },
+  {
+    "model": "customer.GSTServiceType",
+    "pk": 2,
+    "fields": {
+      "service_type": "Manufacture",
+      "service_code": "MANUFACTURE",
+      "sac_code":"SAC-Manu",
+      "hsn_code":"HSN-Manu",
+      "tax_rate":18.0,
+      "status":1.0,
+      "added_on":"2019-01-01 00:00:00",
+      "updated_on":"2019-01-01 00:00:00"
+    }
+  },
+  {
+    "model": "customer.Customer",
+    "pk": 1,
+    "fields": {
+      "name": "Offbeat Research & Development Centre",
+      "code": "ORDC",	  
+      "website": "www.ordc.com",
+      "email": "ordc@gmail.com",
+      "referred_by": "ORDC",
+      "contract_from":"2018-01-01",
+      "contract_to":"9999-01-01",
+      "created_by":"1",	  
+      "updated_by":"1",	  
+      "added_on":"2019-01-01 00:00:00",
+      "updated_on":"2019-01-01 00:00:00",	  
+      "status":"1",
+      "activation_status":true,
+      "activation_date":"2018-01-01",
+      "activated_by":"1",
+      "deactivation_date":"2018-01-01",	  
+      "billing_schedule":"07",	  
+      "day_of_billing":"7",	  
+      "remittance_cycle":"7",	  
+      "credit_limit":"1000",	  
+      "credit_period":"60",	  
+      "bill_delivery_email":true,	  
+      "bill_delivery_hand":true,	 
+      "latest_invoice_date":"2018-01-01",	  
+      "next_bill_date":"2018-01-01",	  
+      "approved":"1",	  
+      "authorized":"1"	  
+    }
+  },
+{
+    "model": "customer.CustomerAddress",
+    "pk": 1,
+    "fields": {
+      "customer": 1,
+      "address_type":3,
+      "address1": "A-2404, Building No-25",
+      "address2": "New Mhada Dindoshi",
+      "address3": "Goregaon East",
+      "pincode":"400063",
+      "city":1,
+      "state":23,
+      "contact_person":"Manager",
+      "mobile":"+91999999999",
+      "telephone":"+91999999999",
+      "email":"info@ordc.com",
+      "landmark":"Near To IT circle",
+      "added_on":"2019-01-01 00:00:00",
+      "updated_on":"2019-01-01 00:00:00",
+      "status":"1"
+    }
+  },
+{
+    "model": "customer.CustomerAddress",
+    "pk": 2,
+    "fields": {
+      "customer": 1,
+      "address_type":4,
+      "address1": "A-404, Building No-26",
+      "address2": "New Mhada Dindoshi",
+      "address3": "Goregaon West",
+      "pincode":"400065",
+      "city":1,
+      "state":23,
+      "contact_person":"Manager",
+      "mobile":"+91999999999",
+      "telephone":"+91999999999",
+      "email":"info@ordc.com",
+      "landmark":"Near To IT Park",
+      "added_on":"2019-01-01 00:00:00",
+      "updated_on":"2019-01-01 00:00:00",
+      "status":"1"
+    }
+  },
+{
+    "model": "customer.GST",
+    "pk": 1,
+    "fields": {
+      "customer_address": 1,
+      "pan_number":"XYZPQR2796E",
+      "gst_number": "27XYZPQR2796E1",
+      "state_gst_code": "27",
+      "regtration_type": 0,
+      "default_reg":"YES",
+      "service_type":1,
+      "use_for":1,
+      "invoice_type":1
+    }
+  },
+{
+    "model": "customer.GST",
+    "pk": 2,
+    "fields": {
+      "customer_address": 2,
+      "pan_number":"XYZPQR3344E",
+      "gst_number": "27XYZPQR3344E1",
+      "state_gst_code": "27",
+      "regtration_type": 0,
+      "default_reg":"YES",
+      "service_type":1,
+      "use_for":1,
+      "invoice_type":1
+    }
+  }
+]
+
+

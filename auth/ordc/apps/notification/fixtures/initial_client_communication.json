@@ -1,0 +1,26 @@
+[
+{
+    "model": "notification.clientcommunication",
+    "pk": 1,
+    "fields": {
+        "channel_id": 1,
+        "client": "1",
+        "notification_template": "Dear Customer, {{}}, your has been placed and your order number {{}}",
+        "sequence": 1,
+        "added_on": "2021-05-22T07:19:55.918",
+        "status": 0.0
+    }
+},
+{
+    "model": "notification.clientcommunication",
+    "pk": 2,
+    "fields": {
+        "channel_id": 1,
+        "client": "Emami",
+        "notification_template": "Dear Customer, {{}}, your has been placed and your order number {{}}",
+        "sequence": 2,
+        "added_on": "2021-05-22T07:22:51.653",
+        "status": 0.0
+    }
+}
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "model": "customer.shipper",
+    "pk": 1,
+    "fields": {
+      "customer": "1",
+      "alias_code": "A01",
+	  "name": "ORDC",
+	  "address": "Delhi",
+	  "shipper_type":"2"
+    }
+  }
+]

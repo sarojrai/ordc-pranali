@@ -1,0 +1,17 @@
+{
+    "status": "Success",
+    "status_code": 200,
+    "message": "You Fetched Product Category Details Successfully",
+    "result": [
+        {
+            "id": 1,
+            "code": "ap",
+            "label": "Appliances"
+        },
+        {
+            "id": 2,
+            "code": "book",
+            "label": "Books"
+        }
+    ]
+}

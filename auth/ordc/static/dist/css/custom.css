@@ -1,0 +1,733 @@
+div .csv-icons {
+  text-decoration: none;
+  color: gray;
+  font-family: -webkit-body;
+  font-size: 14px;
+}
+.import-btn {
+  margin-left: 16px;
+}
+.csv-div {
+  margin : 10px 0px 16px 4px;
+}
+
+
+.pageLimit .form-inline {margin-top: 10px;margin-left: 20px;}
+.pageLimit label {color:#333;font-weight:200;vertical-align: -2px;padding-right: 10px; }
+.csv-div .pageLimit .form-inline {margin-top: -8px;margin-left: 20px;}
+.csv-div .pageLimit label {font-family: -webkit-body;color:gray;font-weight:200;vertical-align: -2px;padding-right: 10px;font-size:14px;}
+
+/* Filter CSS */
+.filtersInput {margin-top:20px;}
+.filtersDisplay {margin-top: 10px;}
+.filtersDisplay .badge {text-transform: none;padding: 4px;height: 30px;padding:9px;}
+.filtersDisplay .close {float: none;line-height:5px;margin-left:5px;font-size:9px;}
+
+/* Delivrd portlet title */
+.portlet.box.delivrd > .portlet-title {background: #eee;color:#000;}
+.portlet.box.delivrd .portlet-title .caption i{color:#000}
+.portlet.box.delivrd .portlet-title .caption {font-size:20px;line-height: 19px;}
+.portlet.box.delivrd .portlet-title .caption i{font-size:18px;}
+
+.table tr.heading > th {background-color: #ffffff !important;}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {vertical-align: middle;}
+
+/***
+Popover fixes
+***/
+.popover .arrow,
+.popover .arrow:after {
+  display: block !important;
+}
+
+/***
+Tiles(new in v1.1.1)
+***/
+.tiles {
+  margin-right: -10px;
+}
+.tiles:before, .tiles:after {
+  display: table;
+  content: " ";
+}
+.tiles:after {
+  clear: both;
+}
+.tiles .tile {
+  display: block;
+  letter-spacing: 0.02em;
+  float: left;
+  height: 135px;
+  width: 135px !important;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  overflow: hidden;
+  border: 4px solid transparent;
+  margin: 0 10px 10px 0;
+}
+.tiles .tile:after, .tiles .tile:before {
+  content: "";
+  float: left;
+}
+.tiles .tile.double {
+  width: 280px !important;
+}
+.tiles .tile.double-down {
+  height: 280px !important;
+}
+.tiles .tile.double-down i {
+  margin-top: 95px;
+}
+.tiles .tile:hover {
+  border-color: #aaa !important;
+}
+.tiles .tile:active, .tiles .tile.selected {
+  border-color: #ccc !important;
+}
+.tiles .tile.selected .corner:after {
+  content: "";
+  display: inline-block;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 40px solid #ccc;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+.tiles .tile.selected .check:after {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 13px;
+  content: "\f00c";
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.tiles .tile.icon {
+  padding: 0;
+}
+.tiles .tile.image .tile-body {
+  padding: 0 !important;
+}
+.tiles .tile.image .tile-body > img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  max-width: 100%;
+}
+.tiles .tile.image .tile-body h3 {
+  display: inline-block;
+}
+.tiles .tile .tile-body {
+  height: 100%;
+  vertical-align: top;
+  padding: 10px 10px;
+  overflow: hidden;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.tiles .tile .tile-body p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+  color: #ffffff;
+  line-height: 20px;
+  overflow: hidden;
+}
+.tiles .tile .tile-body p:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.tiles .tile .tile-body p:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.tiles .tile .tile-body p:hover {
+  color: #ffffff;
+}
+.tiles .tile .tile-body img {
+  float: left;
+  margin-right: 10px;
+}
+.tiles .tile .tile-body img.pull-right {
+  float: right !important;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+.tiles .tile .tile-body > .content {
+  display: inline-block;
+}
+.tiles .tile .tile-body > i {
+  margin-top: 17px;
+  display: block;
+  font-size: 56px;
+  line-height: 56px;
+  text-align: center;
+}
+.tiles .tile .tile-body h1,
+.tiles .tile .tile-body h2,
+.tiles .tile .tile-body h3,
+.tiles .tile .tile-body h4,
+.tiles .tile .tile-body h5,
+.tiles .tile .tile-body h6,
+.tiles .tile .tile-body p {
+  padding: 0;
+  margin: 0;
+  line-height: 14px;
+}
+.tiles .tile .tile-body h1:hover,
+.tiles .tile .tile-body h2:hover,
+.tiles .tile .tile-body h3:hover,
+.tiles .tile .tile-body h4:hover,
+.tiles .tile .tile-body h5:hover,
+.tiles .tile .tile-body h6:hover,
+.tiles .tile .tile-body p:hover {
+  color: #ffffff;
+}
+.tiles .tile .tile-body h3,
+.tiles .tile .tile-body h4 {
+  margin-bottom: 5px;
+}
+.tiles .tile .tile-object {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 30px;
+  background-color: transparent;
+  *zoom: 1;
+}
+.tiles .tile .tile-object:before, .tiles .tile .tile-object:after {
+  display: table;
+  content: "";
+}
+.tiles .tile .tile-object:after {
+  clear: both;
+}
+.tiles .tile .tile-object > .name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffffff;
+}
+.tiles .tile .tile-object > .name > i {
+  vertical-align: middle;
+  display: block;
+  font-size: 24px;
+  height: 18px;
+  width: 24px;
+}
+.tiles .tile .tile-object > .number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 14px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+/*================= Start style of widgets section ==================*/
+
+.widgets{
+  margin: 0 0 15px 0;
+  padding: 5px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 18px 20px 0 rgba(7, 7, 14,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.widgets-content{
+  margin: 0;
+  padding:0;
+}
+.widgets-content .widgets-title{
+  margin-bottom:5px;
+  font-family: 'Poppins', sans-serif;
+  color: #bbb;
+  font-size: 14px;
+  font-weight: 400;
+}
+.widgets-content .widgets-count{
+  margin:0;
+  padding: 0;
+  font-size:28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+.widgets-icon-box {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  border-radius: 50%;
+}
+.widgets-icon-box i{
+  color:#fff;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+/*================= style of action list box ==================*/
+.action-box{
+  display:flex;
+  margin: 5px 0 10px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.action-list{
+  list-style:outside none;
+  margin:0 0 0 8px;
+  padding:0;
+}
+.action-list li{
+  display: inline-block;
+  position: relative;
+}
+.action-list li button{
+  margin: 0;
+  padding: 5px;
+  background: transparent;
+  border:none;
+}
+.action-list li button i{
+  font-size:18px;
+  color:#525252;
+}
+.divider{
+  display:flex;
+  border-bottom:1px solid #ddd;
+}
+
+.filter-search{
+  width: 150px;
+}
+.filter-by{
+  width:325px;
+}
+.w-100{
+  width:100px !important;
+}
+
+/*=================== Custome check box css =====================*/
+.check-box {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.check-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 2px solid #C7C7C7;
+}
+.check-box:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.check-box input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check-box input:checked ~ .checkmark:after {
+  display: block;
+}
+.check-box .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/*=============== style of model popup css ===============*/
+.close-model{
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+}
+.assign-box {
+  margin: 0;
+  padding: 10px;
+  width:100%;
+  font-size:16px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+  text-align:left;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  position: relative;
+}
+.assign-box:hover, .assign-box:focus{
+  border:2px solid #3598dc;
+}
+.assign-box .caret{
+  position: absolute;
+  right:8px;
+  top:16px;
+}
+.assign-list .dropdown-menu {
+  width: calc(100% - 30px);
+  left: 15px;
+  top: 44px;
+  padding: 15px;
+}
+.assign-list .dropdown-menu li{
+  margin:0;
+  padding:0;
+}
+.assign-list .dropdown-menu li label{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+/*Multi Select CSS*/
+span.multiselect-native-select {
+	position: relative
+}
+span.multiselect-native-select select {
+	border: 0!important;
+	clip: rect(0 0 0 0)!important;
+	height: 1px!important;
+	margin: -1px -1px -1px -3px!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	position: absolute!important;
+	width: 1px!important;
+	left: 50%;
+	top: 30px
+}
+.multiselect-container {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+}
+.multiselect-container .input-group {
+	margin: 5px
+}
+.multiselect-container>li {
+	padding: 0
+}
+.multiselect-container>li>a.multiselect-all label {
+	font-weight: 700
+}
+.multiselect-container>li.multiselect-group label {
+	margin: 0;
+	padding: 3px 20px 3px 20px;
+	height: 100%;
+	font-weight: 700
+}
+.multiselect-container>li.multiselect-group-clickable label {
+	cursor: pointer
+}
+.multiselect-container>li>a {
+	padding: 0
+}
+.multiselect-container>li>a>label {
+	margin: 0;
+	height: 100%;
+	cursor: pointer;
+	font-weight: 400;
+	padding: 3px 0 3px 30px
+}
+.multiselect-container>li>a>label.radio, .multiselect-container>li>a>label.checkbox {
+	margin: 0
+}
+.multiselect-container>li>a>label>input[type=checkbox] {
+	margin-bottom: 5px
+}
+.btn-group>.btn-group:nth-child(2)>.multiselect.btn {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px
+}
+.form-inline .multiselect-container label.checkbox, .form-inline .multiselect-container label.radio {
+	padding: 3px 20px 3px 40px
+}
+.form-inline .multiselect-container li a label.checkbox input[type=checkbox], .form-inline .multiselect-container li a label.radio input[type=radio] {
+	margin-left: -20px;
+	margin-right: 0
+}
+
+
+
+/*================== Custome popupp style =================*/
+.custome-popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1031;
+  display: none;
+}
+.popup-box {
+  margin: 0 auto;
+  width: 350px;
+  background: #fff;
+  border-radius:4px;
+  top: 20%;
+  position: relative;
+}
+.popup-header{
+  margin: 0;
+  padding: 10px 15px;
+  background-color: #f7f7f7;
+  border-bottom:1px solid #ddd;
+}
+.popup-header h3{
+  margin:0;
+  padding:0;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.popup-body, .popup-footer{
+  margin: 0;
+  padding:15px;
+}
+
+.multiselect-native-select .btn-group{
+  width:100%;
+}
+.multiselect-native-select .btn-group button{
+  width:100%;
+}
+.multiselect-selected-text{
+  float:left;
+}
+.multiselect-native-select .btn-group button .caret{
+  position: absolute;
+  top:15px;
+  right:15px;
+}
+.multiselect-container{
+  width:100%;
+}
+
+/* =================== Calender style css ====================*/
+.datepicker-days .active.day{
+  background-color: #00BCD4;
+}
+.datepicker-days .table-condensed tbody tr td{
+  text-align:center;
+  vertical-align: middle;
+}
+
+.cc-count-type {
+	display: flex;
+	flex-direction: column;
+}
+.cc-count-type label{
+  font-weight: 400;
+}
+
+/*Cycle Count Statistics table status color */
+#cc_table tr td:last-child span{
+  padding: 3px 5px;
+  font-size: 75%;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 2px;
+}
+.status-warring td:last-child span{
+  background-color:rgba(243, 184, 18, 0.6);
+}
+.status-primary td:last-child span{
+  background-color:rgba(0,188,212,0.6);
+}
+.status-success td:last-child span{
+  background-color: rgba(81,166,38,0.6);
+}
+.status-fuchsia td:last-child span{
+  background-color:rgba(240,18,190,0.6);
+}
+.status-orange td:last-child span{
+  background-color:rgba(255, 101, 27, 0.6);
+
+}
+
+.fieldset {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+}
+legend{
+  font-size:16px;
+}
+.legend{
+  position: relative;
+  padding-bottom:4px !important;
+}
+.legend::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 26px;
+  width: 60px;
+  height: 3px;
+  background-color: #ff851b;
+}
+.legend-action {
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+
+.border-right{
+  border-right:1px solid #ddd;
+}
+.box-title.inv-head{
+  width:100%;
+}
+
+.nav-stacked li{
+  padding:5px 10px;
+}
+.label{
+  text-transform: none !important;
+}
+.product-box{
+  margin-bottom:15px;
+}
+.product-box img{
+  width: 180px;
+  border:1px solid #ddd;
+}
+.box-tools{
+  margin: 0;
+  padding:8px 0;
+}
+.btn-box-tool{
+  box-shadow:none !important;
+}
+
+.btn-caret{
+  border:none;
+  margin: 0;
+  padding: 0;
+}
+.w-30{
+  width:30px;
+}
+.mb-0{
+  margin-bottom: 0 !important;
+}
+.mt-15{
+  margin-top: 15px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.pt-10{
+  padding-top:10px;
+}
+.btn-caret  {
+  transform: rotate(0deg);
+}
+
+#myTable .collapes-row[aria-expanded="true"] .btn-caret{
+  transform: rotate(90deg);
+}
+#myTable .collapes-row[aria-expanded="false"] .btn-caret{
+  transform: rotate(0deg);
+}
+
+.panel-fieldset{
+  border:1px solid #ddd !important;
+  margin-bottom: 30px !important;
+  padding:35px 15px 15px 15px !important;
+  position: relative !important;
+}
+.panel-legend {
+  position: absolute;
+  top: -19px;
+  left: 10px;
+  border: none;
+  width: auto;
+  background-color: #fff;
+  padding: 5px;
+  font-weight:600;
+}
+.action-panel {
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+
+.sku-edit{
+  display: none;
+}
+.sku-code {
+  float: right;
+  margin: 11px 15px 0 0;
+  background: #219187;
+  border-radius: 2px;
+  color: #fff;
+  padding: 4px 10px;
+
+}
+.sku-code a{
+  color:#fff;
+  font-weight: 600;
+}
+#btn-sku-view{
+  display: none;
+}

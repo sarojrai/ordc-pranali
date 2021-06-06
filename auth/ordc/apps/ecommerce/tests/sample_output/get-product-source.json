@@ -1,0 +1,17 @@
+{
+    "status": "Success",
+    "status_code": 200,
+    "message": "You Fetched Source Type  Successfully",
+    "result": [
+        {
+            "id": 1,
+            "code": "marketplace",
+            "label": "MarketPlace"
+        },
+        {
+            "id": 2,
+            "code": "brand_website",
+            "label": "Brand Website"
+        }
+    ]
+}

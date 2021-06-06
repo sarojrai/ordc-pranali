@@ -1,0 +1,85 @@
+{
+    "status": 200,
+    "is_error": false,
+    "message": "Organisations Details Fetched Successfully !",
+    "data": {
+        "BrandWebsite": [
+            {
+                "id": 4,
+                "code": "SHOPIFY",
+                "name": "SHOPIFY"
+            },
+            {
+                "id": 5,
+                "code": "MAGANTO",
+                "name": "MAGANTO"
+            },
+            {
+                "id": 6,
+                "code": "NOO-COMMERCE",
+                "name": "NOO-COMMERCE"
+            },
+            {
+                "id": 7,
+                "code": "IN-HOUSE",
+                "name": "IN-HOUSE"
+            }
+        ],
+        "MarketPlace": [
+            {
+                "id": 8,
+                "code": "AMAZON",
+                "name": "Amazon"
+            },
+            {
+                "id": 9,
+                "code": "FLIPKART",
+                "name": "Flipkart"
+            },
+            {
+                "id": 10,
+                "code": "SNAPDEAL",
+                "name": "Snapdeal"
+            },
+            {
+                "id": 11,
+                "code": "OTHER",
+                "name": "Any Other (Specify)"
+            }
+        ],
+        "WarehouseManagement": [
+            {
+                "id": 12,
+                "code": "UNI-COMMERCE",
+                "name": "UNI-COMMERCE"
+            },
+            {
+                "id": 13,
+                "code": "PURPLEDRONE",
+                "name": "PURPLEDRONE"
+            },
+            {
+                "id": 14,
+                "code": "VINCULLUM",
+                "name": "VINCULLUM"
+            },
+            {
+                "id": 15,
+                "code": "OTHER",
+                "name": "Any Other (Specify)"
+            }
+        ],
+        "CourierPartner": [
+            {
+                "id": 16,
+                "code": "PICKRR",
+                "name": "Pickrr"
+            },
+            {
+                "id": 17,
+                "code": "OTHER",
+                "name": "Any Other (Specify)"
+            }
+        ]
+    }
+}
