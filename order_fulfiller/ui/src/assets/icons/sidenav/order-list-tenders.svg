@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.957" height="12.5" viewBox="0 0 15.957 12.5">
+    <defs>
+        <style>
+            .order-sidenav-icon{fill:#fff;stroke:#eee;stroke-linecap:round;stroke-linejoin:round;stroke-width:.4px}
+        </style>
+    </defs>
+    <g id="Group_154" transform="translate(.2 .2)">
+        <path id="Rectangle_12" d="M0 0h6.789a1 1 0 0 1 1 1 1 1 0 0 1-1 1H0V0z" class="order-sidenav-icon" transform="translate(0 10.095)"/>
+        <path id="Path_23" d="M0 0h14.52a1.02 1.02 0 0 1 1.037 1 1.02 1.02 0 0 1-1.037 1H0z" class="order-sidenav-icon"/>
+        <path id="Rectangle_14" d="M0 0h11.241a1 1 0 0 1 1 1 1 1 0 0 1-1 1H0V0z" class="order-sidenav-icon" transform="translate(0 5.048)"/>
+    </g>
+</svg>

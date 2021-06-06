@@ -1,0 +1,161 @@
+<div class="list-client-container" [formGroup]="formGroup">
+    <div class="search-row">
+        <mat-form-field appearance="outline" class="search-field">
+            <mat-label>Search Here</mat-label>
+            <mat-icon matPrefix svgIcon="order_search"></mat-icon>
+            <input matInput type="text" formControlName="code">
+            <span class="divider">&nbsp;|&nbsp;</span>
+            <mat-icon svgIcon="order_chevron_down" class="select-prefix"></mat-icon>
+            <!-- <mat-select class="search-select list-custom" formControlName="status">
+                <mat-option value="ALL">All</mat-option>heve
+                <mat-option value="DRAFT">Draft</mat-option>
+                <mat-option value="ACTIVE">Active</mat-option>
+                <mat-option value="DEACTIVE">Deactive</mat-option>
+                <mat-option value="CANCEL">Cancel</mat-option>
+                <mat-option value="CLOSE">Close</mat-option>
+            </mat-select> -->
+            <mat-select class="search-select list-custom" formControlName="status">
+                <mat-option value="">NONE</mat-option>
+                <!-- <mat-option [value]="ts.value" *ngFor="let ts of clientStatusList">{{ts.label}}</mat-option> -->
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="filters-row">
+        <div class="list-client-common-form-field">
+            <label>Bulk Action</label>
+            <mat-form-field appearance="outline" class="custom-mat-select">
+                <mat-select class="list-custom" value="" (valueChange)="changeBulkClientStatus($event)">
+                    <mat-option value="">No Action</mat-option>
+                    <mat-option value="ACTIVE">Make Active</mat-option>
+                    <mat-option value="DEACTIVE">Make Inactive</mat-option>
+                </mat-select>
+                <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="list-client-common-form-field">
+            <label>Filter by date</label>
+            <mat-form-field appearance="outline" class="start-end">
+                <mat-date-range-input [rangePicker]="picker" color="primary">
+                    <input matStartDate placeholder="Start date" formControlName="start_date">
+                    <input matEndDate placeholder="End date" formControlName="end_date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon svgIcon="order_date_picker"></mat-icon>
+                </mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+        </div>
+        <button mat-flat-button class="reset-button" (click)="reset()">
+            <mat-icon matPrefix svgIcon="order_reset"></mat-icon>
+            Reset
+        </button>
+    </div>
+    <div class="result-desc">
+        <span>Results displayed after filtering {{clientList?.length}} clients</span>
+    </div>
+    <div class="list-client-table-container">
+        <table mat-table [dataSource]="clientList">
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef class="th">
+                    <mat-checkbox class="select-all"></mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let element" class="select-col">
+                    <mat-checkbox (click)="$event.stopPropagation()" (change)="element.isSelected=!element.isSelected"
+                        [checked]="element.isSelected" color="primary"></mat-checkbox>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="sno">
+                <th mat-header-cell *matHeaderCellDef class="th center">#</th>
+                <td mat-cell *matCellDef="let element; let rowIndex=index" class="sno">
+                    {{rowIndex+1}}
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef class="th">CLIENT CODE</th>
+                <td mat-cell *matCellDef="let element" class="id">
+                    {{element?.code}}</td>
+            </ng-container>
+            <ng-container matColumnDef="name" class="th">
+                <th mat-header-cell *matHeaderCellDef class="th">CLIENT NAME</th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="client-name">
+                        <span class="client-title">{{element?.name}}</span>
+                    </div>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="client_type" class="th">
+                <th mat-header-cell *matHeaderCellDef class="th">CLIENT TYPE</th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="client-name">
+                        <span class="client-title">{{element?.client_type}}</span>
+                    </div>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef class="th">STATUS</th>
+                <td mat-cell *matCellDef="let element" class="status">
+                    <div [ngClass]="{'active': element?.activation_status, 'inactive': !element?.activation_status}">
+                        <span>{{(element?.activation_status?'Yes':'No')}}</span>
+                    </div>
+                </td>
+            </ng-container>
+            <!-- <ng-container matColumnDef="bidders">
+                <th mat-header-cell *matHeaderCellDef class="th">BIDDERS</th>
+                <td mat-cell *matCellDef="let element">
+                    {{element?.additional_info?.total_bidder_opted}}/{{element?.additional_info?.total_bidder_invites}}
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef class="th">PRICE</th>
+                <td mat-cell *matCellDef="let element" class="currency"> {{element?.general_info?.cost_max_value |
+                    currency:'INR':'symbol': '1.0-0'}} </td>
+            </ng-container>
+            <ng-container matColumnDef="created">
+                <th mat-header-cell *matHeaderCellDef class="th">CREATED</th>
+                <td mat-cell *matCellDef="let element" class="created-at"> {{element?.general_info?.created_at |
+                    date:'dd MMM, YYYY'}} </td>
+            </ng-container>
+            <ng-container matColumnDef="countdown">
+                <th mat-header-cell *matHeaderCellDef class="th center">COUNTDOWN</th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="countdown">
+                        <span class="remaining">{{element?.general_info?.countDown}}</span>
+                        <span class="pending" *ngIf="compareWithToday(element?.general_info?.opening_at)">Started
+                            {{element?.general_info?.opening_at | date:'dd MMM, YYYY'}}</span>
+                        <span class="pending" *ngIf="!compareWithToday(element?.general_info?.opening_at)">Starting
+                            {{element?.general_info?.opening_at | date:'dd MMM, YYYY'}}</span>
+                    </div>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="more">
+                <th mat-header-cell *matHeaderCellDef class="th"></th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="more">
+                        <button mat-icon-button [matMenuTriggerFor]="appMenu" [matMenuTriggerData]="{client: element}" *ngIf="element?.general_info?.status!=='DEACTIVE' && element?.general_info?.status!=='CANCEL'">
+                            <mat-icon svgIcon="auction_more"></mat-icon>
+                        </button>
+                    </div>
+                </td>
+            </ng-container> -->
+            <tr mat-header-row ng-repeat="tndr in clientList" *matHeaderRowDef="displayedColumns;sticky: true"
+                class="head-tr"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="data-tr"></tr>
+        </table>
+    </div>
+</div>
+<!-- Mat Menu for Actions -->
+<!-- <mat-menu #appMenu="matMenu">
+    <ng-template matMenuContent let-client="client">
+        <button mat-menu-item (click)="editCreateclient(client)"
+            *ngIf="client?.general_info?.status==='DRAFT'">Edit</button>
+        <button mat-menu-item (click)="changeSingleclientStatus(client, 'ACTIVE')"
+            *ngIf="client?.general_info?.status==='DRAFT'">Active</button>
+        <button mat-menu-item (click)="inviteBidders(client)"
+            *ngIf="client?.general_info?.status==='ACTIVE'">Invite</button>
+        <button mat-menu-item (click)="checkBids(client)" *ngIf="client?.general_info?.status==='ACTIVE'">Bids</button>
+        <button mat-menu-item (click)="changeSingleclientStatus(client, 'DEACTIVE')"
+            *ngIf="client?.general_info?.status==='ACTIVE'">Deactive</button>
+        <button mat-menu-item (click)="changeSingleclientStatus(client, 'CANCEL')"
+            *ngIf="client?.general_info?.status==='ACTIVE'">Cancel</button>
+    </ng-template>
+</mat-menu> -->

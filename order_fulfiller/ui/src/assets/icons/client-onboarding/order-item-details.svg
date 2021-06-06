@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Group_118" width="13.798" height="10.343" viewBox="0 0 13.798 10.343">
+    <defs>
+        <style>
+            .order-tender-icon{fill:#023e8a}
+        </style>
+    </defs>
+    <path id="Rectangle_12" d="M0 0h5.439a1 1 0 0 1 1 1 1 1 0 0 1-1 1H0V0z" class="order-tender-icon" transform="translate(0 8.343)"/>
+    <path id="Path_23" d="M0 0h12.878a.962.962 0 0 1 .92 1 .962.962 0 0 1-.92 1H0z" class="order-tender-icon"/>
+    <path id="Rectangle_14" d="M0 0h9.118a1 1 0 0 1 1 1 1 1 0 0 1-1 1H0V0z" class="order-tender-icon" transform="translate(0 4.172)"/>
+</svg>

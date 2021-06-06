@@ -1,0 +1,25 @@
+.client-integration-container {
+    height: 100%;
+    .group-header .integration-details-header{
+        margin-bottom: 3rem;
+    }
+    .form-sub-group-header {
+        margin-bottom: 0.5rem;
+    }
+    .create-client-container .client-stepper .form-group-container .form-sub-group {
+        padding: 1rem;
+    }
+    .mat-checkbox-label {
+        height: 1.25rem;
+        font-size: 0.9rem;
+        color: #313136;
+    }
+    .mat-checkbox-inner-container {
+        height: 20px;
+        width: 20px;
+    }
+    .form-group-container .form-sub-group .form-sub-group-content .form-field-group {
+        margin-top: 0.8rem;
+    }
+}
+  

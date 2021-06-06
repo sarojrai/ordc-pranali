@@ -1,0 +1,301 @@
+.list-order-container {
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+  background-color: #f4f5f8;
+
+  .mat-form-field-wrapper {
+      padding-bottom: 0.5rem;
+  }
+
+  mat-datepicker-toggle.list-custom {
+      .mat-icon-button {
+          .mat-button-wrapper {
+              .mat-icon {
+                  height: 0.6rem;
+              }
+          }
+      }
+      mat-icon {
+          height: 0.5rem;
+      }
+  }
+
+  .list-order-common-form-field {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0.1rem;
+      label {
+          font-size: 0.9rem;
+          color: #404052;
+          line-height: 1.29;
+          text-align: left;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+      }
+
+      .mat-form-field-infix {
+          // display: inherit;
+          // display: flex;
+          // height: 2.5rem;
+          // font-size: 0.7rem;
+          // margin: 0.5rem 0rem;
+      }
+      margin-right: 1rem;
+  }
+  .search-row {
+      width: 100%;
+      .search-field {
+          width: 60%;
+          .mat-form-field-infix {
+              // display: inherit;
+              display: flex;
+              // height: 2.5rem;
+              // margin: 0.5rem 0rem;
+              // font-size: 0.7rem;
+              .select-prefix {
+                  height: 0.5rem;
+              }
+              .search-select {
+                  width: 15%;
+                  .mat-select-value {
+                      .mat-select-value-text {
+                          color: #023e8a;
+                          font-weight: 500;
+                      }
+                  }
+                  // .mat-select-arrow-wrapper {
+                  //     .mat-select-arrow {
+                  //         display: none;
+                  //     }
+                  // }
+              }
+              .divider {
+                  font-size: 0.8rem;
+              }
+          }
+      }
+  }
+  .filters-row {
+      width: 100%;
+      display: flex;
+      .reset-button {
+          color: #023e8a;
+          font-weight: 500;
+          mat-icon {
+              font-size: 0.7rem;
+          }
+          background-color: #f4f5f8;
+      }
+      .start-end{
+          mat-icon{
+              height: 1rem;
+          }
+      }
+  }
+  .result-desc {
+      width: 100%;
+      margin: 0.5rem 0 0.5rem 0;
+  }
+  .list-order-table-container {
+      width: 100%;
+      height: 650px;
+      @media (min-width: 1024px) and (max-width: 1440px) {
+          height: 450px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+          height: 450px;
+      }
+      overflow-y: auto;
+      table {
+          width: 100%;
+          tbody::-webkit-scrollbar {
+              width: 0.2rem;
+              height: 2.8rem;
+          }
+
+          heatbody::-webkit-scrollbar-thumb {
+              background-color: #023e8a;
+              border-radius: 6px;
+              border: 3px solid #023e8a;
+          }
+
+          tr {
+              // height: 5rem;
+              height: 2rem;
+          }
+          tr:nth-child(even) {
+              background-color: #f6f6f6;
+          }
+          .head-tr {
+              background-color: #023e8a;
+              color: #fff;
+              // height: 2.3rem;
+              height: 2rem;
+              font-size: 1rem;
+          }
+          .data-tr {
+              font-size: 0.6rem;
+              .sno {
+                  cursor: pointer;
+                  font-size: 0.8rem;
+                  // font-size: 0.6rem;
+                  font-weight: bold;
+                  color: #023e8a;
+                  width: 3%;
+                  text-align: center;
+              }
+              .id {
+                  cursor: pointer;
+                  font-size: 0.8rem;
+                  // font-size: 0.6rem;
+                  font-weight: bold;
+                  color: #023e8a;
+              }
+
+              .created-at {
+                  font-weight: 500;
+                  font-size: 0.8rem;
+                  // font-size: 0.6rem;
+              }
+
+              .currency {
+                  font-weight: 500;
+                  font-size: 0.8rem;
+                  // font-size: 0.6rem;
+              }
+
+              .duration {
+                  font-weight: 500;
+                  font-size: 0.8rem;
+                  // font-size: 0.6rem;
+              }
+
+              .countdown {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  .remaining {
+                      font-weight: 500;
+                      font-size: 0.8rem;
+                      // font-size: 0.6rem;
+                  }
+                  .pending {
+                      color: #8695a0;
+                      font-size: 0.7rem;
+                      // font-size: 0.5rem;
+                  }
+              }
+
+              .more {
+                  display: flex;
+                  justify-content: center;
+                  width: 100%;
+                  font-size: 0.6rem;
+              }
+
+              .order-name {
+                  display: flex;
+                  flex-direction: column;
+                  .order-title {
+                      color: #023e8a;
+                      font-weight: bold;
+                      font-size: 0.8rem;
+                      // font-size: 0.6rem;
+                  }
+                  .order-sub {
+                      mat-icon {
+                          height: 0.8rem;
+                          // height: 0.6rem;
+                      }
+                      .arrow-forward {
+                          height: 0.5rem;
+                          // height: 0.4rem;
+                      }
+                      color: #8695a0;
+                      font-size: 0.7rem;
+                      // font-size: 0.5rem;
+                  }
+              }
+              .status {
+                  .active {
+                      border-radius: 0.1rem;
+                      background-color: rgba(35, 184, 99, 0.2);
+                      display: flex;
+                      justify-content: center;
+                      span {
+                          color: #0fb154;
+                          font-weight: 500;
+                      }
+                  }
+                  .inactive {
+                      border-radius: 0.1rem;
+                      background-color: rgba(235, 31, 87, 0.2);
+                      display: flex;
+                      justify-content: center;
+                      span {
+                          color: #eb1f57;
+                          font-weight: 500;
+                      }
+                  }
+                  .draft {
+                      border-radius: 0.1rem;
+                      background-color: rgba(0, 0, 0, 0.2);
+                      display: flex;
+                      justify-content: center;
+                      span {
+                          color: rgba(0, 0, 0, 0.5);
+                          font-weight: 500;
+                      }
+                  }
+              }
+          }
+          .th {
+              font-weight: 700;
+              font-stretch: normal;
+              font-style: normal;
+              font-size: 0.9rem;
+              line-height: 2.14;
+              letter-spacing: normal;
+              text-align: left;
+              color: #ffffff;
+              height: 2.2rem;
+              // height: 1.5rem;
+              &.center {
+                  text-align: center;
+              }
+              .mat-checkbox.select-all {
+                  .mat-checkbox-frame {
+                      border-color: #fff;
+                  }
+                  .mat-checkbox-checkmark-path {
+                      stroke: #023e8a !important;
+                  }
+
+                  &.mat-checkbox-checked {
+                      .mat-checkbox-background {
+                          background-color: #fff;
+                      }
+                  }
+              }
+
+              .mat-checkbox.mat-checkbox-checked.select-all {
+                  .mat-checkbox-background {
+                      background-color: #fff;
+                  }
+              }
+              .center {
+                  text-align: center;
+              }
+              .left {
+                  text-align: left;
+              }
+              .right {
+                  text-align: right;
+              }
+          }
+      }
+  }
+}

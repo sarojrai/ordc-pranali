@@ -1,0 +1,48 @@
+<section class="order-stepper-container">
+    <!-- The navbar for the wizard -->
+    <header class="order-stepper-header">
+        <ol>
+            <ng-container *ngFor="let step of steps; let i = index;">
+                <li [ngClass]="{'active':(selectedIndex==i), 'completed':(selectedIndex>i)}">
+                    <div class="step-label">
+                        <div class="step-index">
+                            <span>{{i+1}}</span>
+                        </div>
+                        <div class="step-content">
+                            <span>
+                                <ng-container *ngIf="step.stepLabel; else showLabelText"
+                                    [ngTemplateOutlet]="step.stepLabel.template">
+                                </ng-container>
+                            </span>
+                        </div>
+                        <ng-template #showLabelText>
+                            {{ step.label }}
+                        </ng-template>
+                    </div>
+                    <!-- <div class="icon-alignment">
+                        <div class="pre-line" [ngClass]="(selectedIndex >= i) ? activeClass : ''"></div>
+                        <a (click)="selectedIndex = i"
+                            [ngClass]="(selectedIndex === i) ? activeClass : ((i < selectedIndex) ? 'completed' : '')">
+                            <mat-icon [svgIcon]="(selectedIndex !== i) ? step.state:getCompletedStateIcon(step.state)"
+                                class="order-step-icon" [ngClass]="(selectedIndex >= i) ? activeClass : ''">
+                            </mat-icon>
+                        </a>
+                        <div class="post-line" [ngClass]="(selectedIndex > i) ? activeClass : ''"></div>
+                    </div> -->
+                </li>
+            </ng-container>
+        </ol>
+    </header>
+    <div class="order-stepper-body">
+        <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
+    </div>
+    <footer class="order-stepper-footer">
+        <button mat-raised-button color="primary" *ngIf="selectedIndex===(steps.length-1)"
+            (click)="onSubmit()">Submit</button>
+        <button mat-raised-button color="primary" cdkStepperNext *ngIf="selectedIndex < (steps.length-1)"
+            (click)="nextClicked()">Save and Next</button>
+        <button mat-stroked-button cdkStepperPrevious *ngIf="selectedIndex > 0">Back</button>
+        <div class="empty-spacer"></div>
+        <button mat-button cdkStepperPrevious color="warn">{{cancelButtonText}}</button>
+    </footer>
+</section>

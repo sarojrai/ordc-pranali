@@ -1,0 +1,639 @@
+<div class="basic-details-container" [formGroup]="formGroup">
+   <!-- <div class="basic-details">
+      <span class="group-header">
+         <span class="tender-details-header">Basic Details</span>
+      </span>
+      <div class="details">
+         <div class="leftdiv">
+            <span class="label"><label>Name : </label></span>
+            <span class="val">
+               <mat-form-field color="primary" appearance="outline" class="">
+                  <mat-label>Name</mat-label>
+                  <input type="text" matInput required formControlName="name" autocomplete="off">
+                  <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                     Name is <strong>required</strong>
+                  </mat-error>
+               </mat-form-field>
+            </span>
+         </div>
+         <div class="rightdiv">
+            <span class="label"><label>Source Type : </label></span>
+            <span class="val">
+               <mat-form-field appearance="outline" class="">
+                  <mat-select class="list-custom" value="" formControlName="source">
+                     <mat-option value="">Select Source</mat-option>
+                     <mat-option value="MRKT">Marketplace</mat-option>
+                     <mat-option value="BRND">Brand Website</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </span>
+         </div>
+      </div>
+      <span class="group-header"><span class="tender-timeline-header">Billing Address</span></span>
+      <div class="break-row"></div>
+
+      <div class="details">
+         <div class="leftdiv">
+            <span class="label"><label>Address Line1: </label></span>
+            <span class="val">
+               <mat-form-field color="primary" appearance="outline" class="">
+                  <mat-label>Address Line1</mat-label>
+                  <input type="text" matInput required formControlName="address1" autocomplete="off">
+                  <mat-error *ngIf="formGroup?.controls?.address1?.hasError('required')">
+                     Address Line1 is <strong>required</strong>
+                  </mat-error>
+               </mat-form-field>
+            </span>
+         </div>
+         <div class="rightdiv">
+            <span class="label"><label>Address Line2: </label></span>
+            <span class="val">
+               <mat-form-field color="primary" appearance="outline" class="">
+                  <mat-label>Address Line2</mat-label>
+                  <input type="text" matInput required formControlName="address2" autocomplete="off">
+               </mat-form-field>
+            </span>
+         </div>
+         <div class="leftdiv">
+            <span class="label"><label>Address Line3: </label></span>
+            <span class="val">
+               <mat-form-field color="primary" appearance="outline" class="">
+                  <mat-label>Address Line</mat-label>
+                  <input type="text" matInput required formControlName="address3" autocomplete="off">
+               </mat-form-field>
+            </span>
+         </div>
+         <div class="rightdiv">
+            <span class="label"><label>State: </label></span>
+            <span class="val">
+               <mat-form-field appearance="outline" class="">
+                  <mat-select class="list-custom" value="" formControlName="state">
+                     <mat-option value="">Select State</mat-option>
+                     <mat-option value="maharashtra">Maharashtra</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </span>
+         </div>
+         <div class="leftdiv">
+            <span class="label"><label>City: </label></span>
+            <span class="val">
+               <mat-form-field color="primary" appearance="outline" class="">
+                  <mat-label>city</mat-label>
+                  <input type="text" matInput required formControlName="city" autocomplete="off">
+                  <mat-error *ngIf="formGroup?.controls?.city?.hasError('required')">
+                     City is <strong>required</strong>
+                  </mat-error>
+               </mat-form-field>
+            </span>
+         </div>
+         <div class="rightdiv">
+            <span class="label"><label>Pincode: </label></span>
+            <span class="val">
+               <mat-form-field color="primary" appearance="outline" class="">
+                  <mat-label>Pincode</mat-label>
+                  <input type="text" matInput required formControlName="pincode" autocomplete="off">
+               </mat-form-field>
+            </span>
+         </div>
+      </div>
+      <span class="group-header"><span class="tender-timeline-header">Bank Account Details</span></span>
+      <div class="break-row"></div>
+      <div class="bank-details" formArrayName="bankDetails">
+         <div class="clone">
+            <div class="leftdiv">
+               <span class="label"><label>Bank Name: </label></span>
+               <span class="label"><label>IFSC Code: </label></span>
+               <span class="label"><label>Account No. : </label></span>
+            </div>
+            <div class="rightdiv">
+               <span class="action">
+                  <mat-icon svgIcon="order_add" class="order-add" (click)="addBankDetail()"></mat-icon>
+               </span>
+            </div>
+         </div>
+         <div class="clone" *ngFor="let formChildGroup of bankDetails.controls; let i=index" [formGroupName]="i">
+            <div class="leftdiv">
+               <span class="label">
+                  <label>
+                     <mat-form-field color="primary" appearance="outline" class="">
+                        <mat-label>Bank Name</mat-label>
+                        <input type="text" formControlName="bankName" matInput required autocomplete="off">
+                     </mat-form-field>
+                  </label>
+               </span>
+               <span class="label">
+                  <label>
+                     <mat-form-field color="primary" appearance="outline" class="">
+                        <mat-label>IFSC Code</mat-label>
+                        <input type="text" formControlName="ifscCode" matInput required autocomplete="off">
+                     </mat-form-field>
+                  </label>
+               </span>
+               <span class="label">
+                  <label>
+                     <mat-form-field color="primary" appearance="outline" class="">
+                        <mat-label>Account No</mat-label>
+                        <input type="text" formControlName="accountNo" matInput required autocomplete="off">
+                     </mat-form-field>
+                  </label>
+               </span>
+            </div>
+            <div class="rightdiv">
+               <span class="action">
+                  <mat-icon svgIcon="order_sub" class="order-sub" (click)="deleteBankDetail(i)"></mat-icon>
+               </span>
+            </div>
+         </div>
+      </div>
+      <span class="group-header"><span class="tender-timeline-header">Contact Details</span></span>
+      <div class="break-row"></div>
+      <div class="contact-details" formArrayName="contactDetails">
+         <div class="clone">
+            <div class="leftdiv">
+               <span class="label"><label>Name: </label></span>
+               <span class="label"><label>Contact No: </label></span>
+               <span class="label"><label>Email. : </label></span>
+            </div>
+            <div class="rightdiv">
+               <span class="action">
+                  <mat-icon svgIcon="order_add" class="order-add" (click)="addContactDetail()"></mat-icon>
+               </span>
+            </div>
+         </div>
+         <div class="clone" *ngFor="let formChildGroup of contactDetails.controls; let i=index" [formGroupName]="i">
+            <div class="leftdiv">
+               <span class="label">
+                  <label>
+                     <mat-form-field color="primary" appearance="outline" class="">
+                        <mat-label>Name</mat-label>
+                        <input type="text" formControlName="name" matInput required autocomplete="off">
+                     </mat-form-field>
+                  </label>
+               </span>
+               <span class="label">
+                  <label>
+                     <mat-form-field color="primary" appearance="outline" class="">
+                        <mat-label>Contact No</mat-label>
+                        <input type="text" formControlName="contactNo" matInput required autocomplete="off">
+                     </mat-form-field>
+                  </label>
+               </span>
+               <span class="label">
+                  <label>
+                     <mat-form-field color="primary" appearance="outline" class="">
+                        <mat-label>Email</mat-label>
+                        <input type="text" formControlName="email" matInput required autocomplete="off">
+                     </mat-form-field>
+                  </label>
+               </span>
+            </div>
+            <div class="rightdiv">
+               <span class="action">
+                  <mat-icon svgIcon="order_sub" class="order-sub" (click)="deleteContactDetail(i)"></mat-icon>
+               </span>
+            </div>
+         </div>
+      </div>
+      <span class="group-header"><span class="tender-timeline-header">Product Information</span></span>
+      <div class="break-row"></div>
+      <div class="details">
+         <div class="leftdiv">
+            <span class="label"><label>Product Category : </label></span>
+            <span class="val">
+               <mat-form-field appearance="outline" class="">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Product Category </mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </span>
+         </div>
+         <div class="rightdiv">
+            <span class="label"><label>Product Sales Values/Worth : </label></span>
+            <span class="val">
+               <mat-form-field color="primary" appearance="outline" class="">
+                  <mat-label>Sales Values</mat-label>
+                  <input type="text" matInput required formControlName="salesValue" autocomplete="off">
+                  <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error>
+               </mat-form-field>
+            </span>
+         </div>
+      </div> -->
+   <div class="form-group-container">
+      <div class="form-sub-group">
+         <div class="form-sub-group-header">
+            <span class="sub-group-header-text">Basic Information</span>
+         </div>
+         <div class="form-sub-group-content">
+            <div class="form-field-group">
+               <label>Client Name</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required formControlName="name" autocomplete="off">
+                  <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                     Client Name is <strong>required</strong>
+                  </mat-error>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Client Type</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="source">
+                     <mat-option value="">Select Client Type</mat-option>
+                     <mat-option value="MRKT">Marketplace</mat-option>
+                     <mat-option value="BRND">Brand Website</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Contract To</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Contract From</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>Industry/Domain</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select Industry/Domain</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Product Categroy</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select Product Categroy</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Product Sales/month</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_rupees"></mat-icon>
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>State</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select State</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>City</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select City</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Pincode</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>Email</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_email"></mat-icon>
+                  <input type="email" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Phone</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_phone"></mat-icon>
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Website</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_web"></mat-icon>
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+         </div>
+      </div>
+      <div class="break-row"></div>
+      <div class="form-sub-group">
+         <div class="form-sub-group-header">
+            <span class="sub-group-header-text">Contact Person</span>
+         </div>
+         <div class="form-sub-group-content">
+            <div class="form-field-group">
+               <label>Name</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                     Contact Person Name is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Phone</label>
+               <mat-form-field appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_phone"></mat-icon>
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                        Contact Person Phone is <strong>required</strong>
+                     </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Email</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_email"></mat-icon>
+                  <input type="email" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Referred By</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+         </div>
+      </div>
+      <div class="break-row"></div>
+      <div class="form-sub-group">
+         <div class="form-sub-group-header">
+            <span class="sub-group-header-text">Shipping Address</span>
+         </div>
+         <div class="form-sub-group-content">
+            <div class="form-field-group">
+               <label>Address Line 1 </label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                     Contact Person Name is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>Address Line 2</label>
+               <mat-form-field appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_phone"></mat-icon>
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                        Contact Person Phone is <strong>required</strong>
+                     </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>State</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select State</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>City</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select City</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Pincode</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>Phone</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_phone"></mat-icon>
+                  <input type="number" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Email</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_email"></mat-icon>
+                  <input type="email" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+         </div>
+      </div>
+      <div class="form-sub-group">
+         <div class="form-sub-group-header">
+            <span class="sub-group-header-text">Billing Address</span>
+            <span>Same as Shipping Address</span>
+         </div>
+         <div class="form-sub-group-content">
+            <div class="form-field-group">
+               <label>Address Line 1 </label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                     Contact Person Name is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>Address Line 2</label>
+               <mat-form-field appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_phone"></mat-icon>
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                        Contact Person Phone is <strong>required</strong>
+                     </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>State</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select State</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>City</label>
+               <mat-form-field appearance="outline">
+                  <mat-select class="list-custom" value="" formControlName="productCategory">
+                     <mat-option value="">Select City</mat-option>
+                     <mat-option value="PPD">Pre-Paid</mat-option>
+                     <mat-option value="COD">Cash On Delivery</mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix svgIcon="order_chevron_down"></mat-icon>
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Pincode</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+            <div class="form-field-group">
+               <label>Phone</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_phone"></mat-icon>
+                  <input type="number" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Email</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_email"></mat-icon>
+                  <input type="email" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="break-row"></div>
+         </div>
+      </div>
+      <div class="break-row"></div>
+      <div class="form-sub-group">
+         <div class="form-sub-group-header">
+            <span class="sub-group-header-text">Bank Account Details</span>
+         </div>
+         <div class="form-sub-group-content">
+            <div class="form-field-group">
+               <label>Select Bank</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <mat-select class="list-custom" value="">
+                     <mat-option value="">Select Bank</mat-option>
+                     <mat-option value="PPD">ABC</mat-option>
+                     <mat-option value="COD">DEF</mat-option>
+                  </mat-select>
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                     Contact Person Name is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>IFSC Code</label>
+               <mat-form-field appearance="outline">
+                  <mat-icon matPrefix svgIcon="order_phone"></mat-icon>
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.name?.hasError('required')">
+                        Contact Person Phone is <strong>required</strong>
+                     </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>Account Number</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="number" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>GST</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+            <div class="form-field-group">
+               <label>SAC</label>
+               <mat-form-field color="primary" appearance="outline">
+                  <input type="text" matInput required autocomplete="off">
+                  <!-- <mat-error *ngIf="formGroup?.controls?.sales_value?.hasError('required')">
+                     Sales Values is <strong>required</strong>
+                  </mat-error> -->
+               </mat-form-field>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

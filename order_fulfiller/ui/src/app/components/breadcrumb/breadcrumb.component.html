@@ -1,0 +1,14 @@
+<div class="breadcrumb-container">
+    <ol class="breadcrumb">
+        <li *ngFor="let breadcrumb of breadcrumbs; let i=index">
+            <span [routerLink]="breadcrumb.url" routerLinkActive="router-link-active" *ngIf="i<breadcrumbs.length-1">
+                {{ breadcrumb.label }}
+            </span>
+            <mat-icon svgIcon="order_chevron_next" class="chevron" *ngIf="i<breadcrumbs.length-1"></mat-icon>
+            <span class="current" *ngIf="i===breadcrumbs.length-1">
+                {{ breadcrumb.label }}
+            </span>
+        </li>
+    </ol>
+    <div class="screen-res">{{innerWidth}} X {{innerHeight}}</div>
+</div>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+    <defs>
+        <style>
+            .cls-3{fill:#2196f3}
+        </style>
+    </defs>
+    <g id="email" transform="translate(0 -85.333)">
+        <path id="Path_311" fill="#1e88e5" d="M35.214 252.121a2.5 2.5 0 0 1-1.92.9h-19a2.5 2.5 0 0 1-1.92-.9l9.17-7.64.95.65a2.289 2.289 0 0 0 2.6 0l.95-.65z" transform="translate(-11.794 -151.688)"/>
+        <path id="Path_312" fill="#64b5f6" d="M32.508 86.423l-9.31 6.37-.95.65a2.289 2.289 0 0 1-2.6 0l-.95-.65-9.31-6.38a2.511 2.511 0 0 1 2.06-1.08h19a2.467 2.467 0 0 1 2.06 1.09z" transform="translate(-8.948)"/>
+        <g id="Group_667" transform="translate(0 86.413)">
+            <path id="Path_313" d="M9.75 114.755l-9.17 7.64a2.489 2.489 0 0 1-.58-1.6v-11a2.464 2.464 0 0 1 .44-1.42z" class="cls-3" transform="translate(0 -108.375)"/>
+            <path id="Path_314" d="M313.751 110v11a2.489 2.489 0 0 1-.58 1.6l-9.17-7.64 9.31-6.37a2.456 2.456 0 0 1 .44 1.41z" class="cls-3" transform="translate(-289.751 -108.578)"/>
+        </g>
+    </g>
+</svg>

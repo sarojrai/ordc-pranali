@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Icon_ionic-logo-ionic" width="57" height="57" viewBox="0 0 57 57">
+    <defs>
+        <style>
+            .order-common-icon{fill:#18baff}
+        </style>
+    </defs>
+    <path id="Path_6" d="M24.324 11.334a12.989 12.989 0 1 0 12.989 12.99 13 13 0 0 0-12.989-12.99z" class="order-common-icon" transform="translate(4.176 4.176)"/>
+    <path id="Path_7" d="M36.37 11.769a5.919 5.919 0 1 1-5.919-5.919 5.919 5.919 0 0 1 5.919 5.919z" class="order-common-icon" transform="translate(16.697 -1.027)"/>
+    <path id="Path_8" fill="#03045e" d="M57.813 20.064l-.247-.548-.4.452a8.954 8.954 0 0 1-3.576 2.453l-.384.137.151.37A23.272 23.272 0 1 1 41.85 10.843l.37.178.164-.37A8.917 8.917 0 0 1 45.015 7.2l.466-.37-.534-.274a28.2 28.2 0 0 0-13.072-3.181 28.5 28.5 0 1 0 25.938 16.689z" transform="translate(-3.375 -3.375)"/>
+</svg>

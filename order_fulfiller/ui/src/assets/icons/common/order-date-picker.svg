@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.171" height="15.6" viewBox="0 0 16.171 15.6">
+    <defs>
+        <style>
+            .cls-3{stroke-miterlimit:10;stroke-width:1.6px;stroke:#023e8a;fill:#18baff;stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="Date_Picker_54_Line" transform="translate(.608 .8)">
+        <path id="Path-2" fill="none" stroke="#18baff" stroke-miterlimit="10" stroke-width="1.6px" d="M0 .237h14.575" transform="translate(0 5.325)"/>
+        <rect id="Rectangle" width="14.571" height="11.89" fill="none" stroke="#023e8a" stroke-miterlimit="10" stroke-width="1.6px" rx="1.895" transform="translate(.192 2.11)"/>
+        <path id="Path-4" d="M.237 0v2.61" class="cls-3" transform="translate(11.324)"/>
+        <path id="Path-4-Copy" d="M.237 0v2.61" class="cls-3" transform="translate(3.143)"/>
+    </g>
+</svg>

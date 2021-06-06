@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.556" height="18" viewBox="0 0 21.556 18">
+    <defs>
+        <style>
+            .order-tender-icon,.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}.order-tender-icon{stroke:#023e8a}.cls-2{stroke:#18baff}
+        </style>
+    </defs>
+    <g id="Icon_feather-truck" transform="translate(-.5 -3.5)">
+        <path id="Path_107" d="M1.5 4.5h13.333v11.556H1.5z" class="order-tender-icon"/>
+        <path id="Path_108" d="M24 12h3.556l2.667 2.667v4.444H24z" class="order-tender-icon" transform="translate(-9.167 -3.056)"/>
+        <path id="Path_109" d="M8.944 26.222A2.222 2.222 0 1 1 6.722 24a2.222 2.222 0 0 1 2.222 2.222z" class="cls-2" transform="translate(-1.222 -7.944)"/>
+        <path id="Path_110" d="M28.444 26.222A2.222 2.222 0 1 1 26.222 24a2.222 2.222 0 0 1 2.222 2.222z" class="cls-2" transform="translate(-9.167 -7.944)"/>
+    </g>
+</svg>

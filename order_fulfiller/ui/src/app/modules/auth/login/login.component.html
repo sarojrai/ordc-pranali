@@ -1,0 +1,82 @@
+<div class="login-container">
+    <div class="login-section">
+        <div class="logo-row">
+            <div class="logo-container">
+                <img src="./assets/icons/common/order-logo.svg">
+                <span>ORDER FULFILLER</span>
+            </div>
+            <div class="empty-container"></div>
+        </div>
+        <div class="login-spacer-1"></div>
+        <div class="login-row">
+            <form [formGroup]="loginForm">
+                <mat-form-field color="accent">
+                    <mat-label>User ID</mat-label>
+                    <input type="text" matInput formControlName="userName">
+                    <mat-error
+                        *ngIf="loginForm.controls.userName.hasError('email') && !loginForm.controls.userName.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.controls.userName.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field color="accent">
+                    <mat-label>Password</mat-label>
+                    <input [type]="showPassword ? 'text' : 'password'" matInput formControlName="password">
+                    <mat-icon matSuffix svgIcon="icon_feather_eye_off" (click)="showPassword = !showPassword">
+                    </mat-icon>
+                    <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <div class="sign-in">
+                    <mat-checkbox color="primary">Remember Me</mat-checkbox>
+                    <button mat-raised-button color="accent" (click)="signIn()">Sign
+                        In</button>
+                    <a>Trouble Signing In ?</a>
+                </div>
+            </form>
+        </div>
+        <div class="login-spacer-2"></div>
+        <div class="signup-row">
+            <span class="header">Don't have an account with us ?</span>
+            <span class="content">Grab the Spring offer - flat 30% discount before 31st March, 2021 to enjoy early
+                access to tenders.</span>
+            <span class="link">Create a Account</span>
+        </div>
+        <div class="login-spacer-3"></div>
+    </div>
+    <div class="cover-section">
+        <div class="spacer-1"></div>
+        <div class="header">
+            <p>
+                Waiting for your<br>
+                turn to bid ?
+            </p>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet.</p>
+        </div>
+        <div class="spacer-2"></div>
+        <div class="subscription">
+            <mat-form-field class="mat-white">
+                <mat-label>Email ID</mat-label>
+                <input type="email" matInput>
+                <span matSuffix>Subscribe Newsletter</span>
+            </mat-form-field>
+        </div>
+        <div class="social-media">
+            <a>
+                <mat-icon matSuffix svgIcon="twitter"></mat-icon>
+            </a>
+            <a>
+                <mat-icon matSuffix svgIcon="linkedin"></mat-icon>
+            </a>
+            <a>
+                <mat-icon matSuffix svgIcon="facebook"></mat-icon>
+            </a>
+        </div>
+    </div>
+</div>

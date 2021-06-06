@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.544" height="15.75" viewBox="0 0 17.544 15.75">
+    <defs>
+        <style>
+            .order-topbar-icon{fill:#01025a}
+        </style>
+    </defs>
+    <g id="Icon_ionic-ios-menu" transform="translate(-4.5 -10.125)">
+        <path id="Path_68" d="M21.313 12.375H5.231c-.4 0-.731-.506-.731-1.125s.329-1.125.731-1.125h16.082c.4 0 .731.506.731 1.125s-.329 1.125-.731 1.125z" class="order-topbar-icon"/>
+        <path id="Path_69" d="M21.313 19.125H5.231c-.4 0-.731-.506-.731-1.125s.329-1.125.731-1.125h16.082c.4 0 .731.506.731 1.125s-.329 1.125-.731 1.125z" class="order-topbar-icon"/>
+        <path id="Path_70" d="M21.313 25.875H5.231c-.4 0-.731-.506-.731-1.125s.329-1.125.731-1.125h16.082c.4 0 .731.506.731 1.125s-.329 1.125-.731 1.125z" class="order-topbar-icon"/>
+    </g>
+</svg>

@@ -1,0 +1,51 @@
+.client-communication-container {
+    .table-container {
+        max-height: 54vh;
+        width: 60%;
+        table {
+            width: 100%;
+            tbody::-webkit-scrollbar {
+                width: 0.2rem;
+                height: 2.8rem;
+            }
+
+            tbody::-webkit-scrollbar-thumb {
+                background-color: #023e8a;
+                border-radius: 6px;
+                border: 3px solid #023e8a;
+            }
+
+            .forward {
+                height: 0.5rem;
+            }
+
+            th.mode-col,
+            td.mode-col {
+                min-width: 12rem;
+                color: #404052;
+                font-weight: bold;
+                font-size: 0.9rem;
+            }
+
+            .head-tr, .head-th {
+                background-color: #023e8a;
+                color: #fff;
+                height: 2rem;
+                font-size: 0.8rem;
+                font-weight: bold;
+            }
+
+            tr.data-tr {
+                height: 2rem;
+            }
+            tr.data-tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        }
+        margin-bottom: 1rem;
+    }
+
+    .priority-container{
+        width: 60%;
+    }
+}

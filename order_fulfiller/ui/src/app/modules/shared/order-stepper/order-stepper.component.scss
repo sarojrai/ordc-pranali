@@ -1,0 +1,205 @@
+.order-stepper-container {
+    display: flex;
+    flex-direction: column;
+    .order-stepper-header {
+        flex: 1 1 10%;
+        ol {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-inline-start: 0rem;
+            margin-block-end: 0rem;
+            margin-block-start: 0rem;
+            // width: 90%;
+
+            li {
+                display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                // justify-content: flex-end;
+
+                flex-grow: 1;
+                flex-basis: 0;
+                font-weight: 600;
+                font-size: 0.9rem;
+                line-height: 1.43;
+                position: relative;
+                height: auto;
+                // text-align: center;
+                padding: 1rem 0;
+                height: 2rem;
+                .step-label {
+                    width: 95%;
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: flex-start;
+                    border-radius: 0.1rem;
+                    border-bottom: 0.3rem solid #d2d2d2;
+                    .step-index {
+                        color: #fff;
+                        background-color: #d2d2d2;
+                        // height: 100%;
+                        flex-grow: 0.1;
+                        width: 14%;
+                        text-align: center;
+                        border-radius: 25% 25% 0 0;
+                        display: flex;
+                        align-items: center;
+                        span {
+                            width: 100%;
+                        }
+                    }
+                    .step-content {
+                        flex-grow: 2;
+                        color: #5d5d6b;
+                        span {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+                // .step-label {
+                //     opacity: 0.5;
+                // }
+                // .icon-alignment {
+                //     display: flex;
+                //     width: 100%;
+                //     align-items: center;
+                //     .pre-line,
+                //     .post-line {
+                //         // height: 0;
+                //         height: 0.2rem;
+                //         // border: solid 2px #f3f3f7;
+                //         background-color: #f3f3f7;
+                //         // width: 90%;
+                //         flex-grow: 1;
+                //         flex-basis: 0;
+                //     }
+
+                //     .pre-line.active,
+                //     .post-line.active {
+                //         // height: 0;
+                //         // border: solid 2px #023e8a;
+                //         background-color: #023e8a;
+                //         // width: 90%;
+                //     }
+                //     a {
+                //         display: flex;
+                //         align-items: center;
+                //         flex-direction: column;
+                //         text-decoration: none;
+
+                //         font-size: 0.6rem;
+                //         // &:hover {
+                //         //     border-bottom: solid thin #000000;
+                //         // }
+                //         border: solid 0.3rem #f3f3f7;
+                //         border-radius: 50%;
+                //         background-color: #f3f3f7;
+                //         .order-step-icon {
+                //             // height: 2rem;
+                //             // width: 2rem;
+                //             height: 1.2rem;
+                //             width: 1.2rem;
+                //             display: flex;
+                //             align-items: center;
+                //             justify-content: center;
+                //             svg {
+                //                 height: 60%;
+                //                 width: 50%;
+                //             }
+                //         }
+                //     }
+                //     a.active,
+                //     a:hover {
+                //         border-color: #18baff;
+                //         background-color: #fff;
+                //     }
+
+                //     a.completed {
+                //         background-color: #fff;
+                //         border-color: #023e8a;
+                //     }
+                // }
+            }
+
+            li.active {
+                .step-label {
+                    border-bottom: 0.3rem solid #4db71a;
+                    .step-index {
+                        background-color: #4db71a;
+                    }
+                    .step-content {
+                        color: #000;
+                    }
+                }
+            }
+
+            li.completed {
+                .step-label {
+                    border-bottom: 0.3rem solid #0c2247;
+                    .step-index {
+                        background-color: #0c2247;
+                    }
+                    .step-content {
+                        color: #1f1f24;
+                    }
+                }
+            }
+
+            // li:first-child {
+            //     .pre-line {
+            //         // border: solid 2px #023e8a;
+            //         background-color: #023e8a;
+            //         // width: 90%;
+            //     }
+            //     // flex-grow: 0.5;
+            // }
+
+            // li:last-child {
+            //     // .pre-line {
+            //     //     width: 90%;
+            //     // }
+            //     .post-line {
+            //         // border-color: #fff;
+            //         background-color: transparent;
+            //     }
+            //     // flex-grow: 0.5;
+            // }
+        }
+    }
+
+    .order-stepper-body {
+        // margin: 0 auto;
+        padding: 0 0rem 1rem 0;
+        overflow-y: auto;
+        flex: 3 3 80%;
+        // @media (max-height: 850px) {
+        //     max-height: 60vh;
+        //     min-height: 60vh;
+        // }
+
+        // @media (min-height: 851px) {
+        //     min-height: 65vh;
+        //     max-height: 65vh;
+        // }
+    }
+
+    .order-stepper-footer {
+        flex: 1 1 10%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+        .empty-spacer {
+            flex-grow: 20;
+        }
+        button {
+            flex-grow: 1;
+            margin-left: 1rem;
+        }
+        button.mat-accent {
+            color: #fff;
+        }
+    }
+}

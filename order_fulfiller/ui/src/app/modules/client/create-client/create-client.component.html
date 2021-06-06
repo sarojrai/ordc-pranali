@@ -1,0 +1,40 @@
+<div class="create-client-container">
+    <div class="topbar">
+        <span class="header-text">Client Onboarding</span>
+    </div>
+    <div class="client-stepper">
+        <form [formGroup]="createClientFormGroup">
+            <order-stepper formArrayName="clientSection" [linear]="true" #stepper (nextEvent)="checkGroupValidation()"
+                (submit)="onSubmit($event)" [cancelButtonText]="'Cancel Onboarding'" selectedIndex=1>
+                <cdk-step state="order_general_info" formGroupName="0" [stepControl]="getStepperFormGroup(0)">
+                    <ng-template cdkStepLabel>
+                        Basic Information
+                    </ng-template>
+                    <order-client-basic-details [formGroup]="getStepperFormGroup(0)"></order-client-basic-details>
+                </cdk-step>
+                <cdk-step state="order_item_details" formGroupName="1" [stepControl]="getStepperFormGroup(1)">
+                    <ng-template cdkStepLabel>
+                        Integration
+                    </ng-template>
+                    <order-client-integration [formGroup]="getStepperFormGroup(1)" [brandWebsites]="brandWebsites"
+                        [marketPlaceWebsites]="marketPlaceWebsites" [warehouseMgmts]="warehouseMgmts"
+                        [courierPartners]="courierPartners"></order-client-integration>
+                </cdk-step>
+                <cdk-step state="order_item_details" formGroupName="2" [stepControl]="getStepperFormGroup(2)">
+                    <ng-template cdkStepLabel>
+                        Communication
+                    </ng-template>
+                    <order-client-communication [formGroup]="getStepperFormGroup(2)"
+                        [notificationMethods]="notificationMethods" [orderTypes]="orderTypes"
+                        [modeOfNotifications]="modeOfNotifications">
+                    </order-client-communication>
+                </cdk-step>
+                <cdk-step state="order_bidding_rules" formGroupName="3" [stepControl]="getStepperFormGroup(3)">
+                    <ng-template cdkStepLabel>
+                        Summary
+                    </ng-template>
+                </cdk-step>
+            </order-stepper>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+.order-topbar {
+    box-shadow: 0 0 54px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    mat-toolbar {
+        max-height: 3.5rem;
+    }
+    .topbar-spacer {
+        flex: 1 1 auto;
+    }
+
+    // .profile-name-span {
+    //     font-size: 1rem;
+    //     line-height: 2.5rem;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
+    .profile-pic {
+        background-color: #f5f5f5;
+        margin: 0 0.4rem 0 0;
+        height: 1.8rem;
+        width: 1.8rem;
+        border: solid 1px #03045e;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .user-name {
+        font-size: 0.9rem;
+        line-height: 2.8;
+        letter-spacing: -0.36px;
+        color: #000000;
+        padding-top: 0.3rem;
+    }
+
+    .logo {
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        img {
+            height: 1.5rem;
+        }
+        span {
+            margin: 0.2rem 0 0.2rem 1.4rem;
+            font-family: DMSans;
+            font-size: 0.75rem;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.4rem;
+            text-align: left;
+            color: #03045e;
+        }
+    }
+
+    mat-divider.topbar-divider {
+        width: 0;
+        height: 1.8rem;
+        margin: 0.8rem 0.5rem;
+        opacity: 0.1;
+        border: solid 1px #000000;
+    }
+
+    button mat-icon {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    button mat-icon.profile-pic {
+        height: 1.5rem;
+        width: 1.5rem;
+        border: solid 1px #03045e;
+    }
+}

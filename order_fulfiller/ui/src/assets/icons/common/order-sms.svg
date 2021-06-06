@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.998" viewBox="0 0 20 19.998">
+    <defs>
+        <style>
+            .cls-3{fill:#b49aca}.cls-4{fill:#ecf0f1}
+        </style>
+    </defs>
+    <g id="Page-1">
+        <g id="_001---Speech-Bubble">
+            <path id="Shape" fill="#894b9d" d="M17.043 16.44a.34.34 0 0 0-.252.387l.444 2.762a.345.345 0 0 1-.59.3l-2.89-3.223a.345.345 0 0 0-.257-.114h-9.7A3.793 3.793 0 0 1 0 12.759V3.793A3.793 3.793 0 0 1 3.793 0h12.414A3.793 3.793 0 0 1 20 3.793v8.966a3.83 3.83 0 0 1-2.957 3.681z"/>
+            <path id="Shape-2" fill="#955ba5" d="M17.407.193C12.417.807 1.838 3.362.21 14.007A3.735 3.735 0 0 1 0 12.759V3.793A3.791 3.791 0 0 1 3.793 0h12.414a3.821 3.821 0 0 1 1.2.193z"/>
+            <path id="Shape-3" d="M3.345 6.1A.345.345 0 0 1 3 5.759 2.762 2.762 0 0 1 5.759 3a.345.345 0 0 1 0 .69A2.071 2.071 0 0 0 3.69 5.759a.345.345 0 0 1-.345.345z" class="cls-3" transform="translate(-1.965 -1.966)"/>
+            <circle id="Oval" cx=".345" cy=".345" r=".345" class="cls-3" transform="translate(4.828 1.034)"/>
+            <g id="Group_670" transform="translate(3.103 6.897)">
+                <circle id="Oval-2" cx="1.379" cy="1.379" r="1.379" class="cls-4"/>
+                <circle id="Oval-3" cx="1.379" cy="1.379" r="1.379" class="cls-4" transform="translate(5.517)"/>
+                <circle id="Oval-4" cx="1.379" cy="1.379" r="1.379" class="cls-4" transform="translate(11.034)"/>
+            </g>
+        </g>
+    </g>
+</svg>

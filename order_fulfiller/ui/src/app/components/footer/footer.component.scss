@@ -1,0 +1,21 @@
+.order-footer {
+    height: 1.8rem;
+    box-shadow: 0 0 54px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        line-height: 1.33;
+        font-family: DMSans;
+        height: 1rem;
+        font-family: DMSans;
+        font-size: 0.8rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.29px;
+        display: inline-block;
+        margin: 0.5rem 0;
+    }
+}

@@ -1,0 +1,152 @@
+.create-client-container {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    .topbar {
+        // height: 10%;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24), 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+        background-color: #ffffff;
+        padding: 1.25rem;
+        flex: 0 1 10%;
+        .header-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #011e52;
+        }
+    }
+
+    .client-stepper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        // height: 90%;
+        flex: 1 1 90%;
+        // .group-header {
+        //     font-size: 1.2rem;
+        //     font-weight: bold;
+        //     line-height: 1.33;
+        //     letter-spacing: -0.43px;
+        //     color: #023e8a;
+        //     .header-text {
+        //         width: 10%;
+        //     }
+        //     .header-text-medium {
+        //         width: 15%;
+        //     }
+        //     .header-text-large {
+        //         width: 25%;
+        //     }
+        //     .horizontal-line {
+        //         flex-grow: 1;
+        //         opacity: 0.05;
+        //         border: 1px solid #000;
+        //     }
+
+        //     .horizontal-line.small {
+        //         width: 66%;
+        //     }
+        //     .horizontal-line.medium {
+        //         width: 78%;
+        //     }
+        // }
+        // .order-common-form-field.common-mat-field {
+        //     // width: 15.5%;
+        //     mat-form-field {
+        //         width: 95%;
+        //     }
+        //     .hide-label {
+        //         color: #fff;
+        //     }
+        //     label {
+        //         font-weight: 700;
+        //     }
+        //     display: block;
+        //     margin-bottom: 1rem;
+        // }
+
+        // .order-common-form-field.selection-container {
+        //     // width: 16%;
+        //     margin: 0.25rem 0.5rem 0.5rem 0;
+        //     div.selection-type {
+        //         // height: 2.2rem;
+        //         width: 95%;
+        //         mat-radio-group,
+        //         .checkbox-group {
+        //             display: flex;
+        //             // align-items: center;
+        //             // justify-content: space-between;
+        //             flex-wrap: wrap;
+        //             mat-radio-button,
+        //             mat-checkbox {
+        //                 width: 20%;
+        //                 // height: 2.4rem;
+        //                 margin-left: 0.2rem;
+        //                 .mat-ripple {
+        //                     display: none;
+        //                 }
+        //                 .mat-radio-label .mat-radio-label-content,
+        //                 .mat-checkbox-label {
+        //                     font-weight: 500;
+        //                 }
+        //             }
+
+        //             mat-radio-button {
+        //                 display: flex;
+        //                 justify-content: center;
+        //             }
+        //         }
+        //         mat-error {
+        //             font-size: 0.6rem;
+        //         }
+        //     }
+        // }
+
+        .form-group-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .form-sub-group {
+                display: flex;
+                flex-direction: column;
+                border-radius: 0.5rem;
+                border: solid 0.1rem #d2d2d2;
+                background-color: #ffffff;
+                padding: 2rem 1rem 1rem;
+                flex: 1 1 auto;
+                margin-bottom: 0.5rem;
+                margin-right: 0.5rem;
+                .form-sub-group-header {
+                    flex: 0 1 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    .sub-group-header-text {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: #011e52;
+                    }
+                }
+                .form-sub-group-content {
+                    flex: 1 1 auto;
+                    display: flex;
+                    flex-flow: row;
+                    flex-wrap: wrap;
+                    .form-field-group {
+                        display: flex;
+                        flex-flow: column;
+                        flex: 1 1 auto;
+                        margin-right: 1rem;
+                        label {
+                            font-size: 0.8rem;
+                            line-height: 1.54;
+                            color: #313136;
+                        }
+                    }
+                }
+            }
+            .break-row {
+                flex-basis: 100%;
+                height: 0;
+            }
+        }
+    }
+}

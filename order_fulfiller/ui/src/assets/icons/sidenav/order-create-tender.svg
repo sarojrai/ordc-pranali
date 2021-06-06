@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.479" height="13.479" viewBox="0 0 13.479 13.479">
+    <defs>
+        <style>
+            .order-sidenav-icon{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="Icon_feather-user-plus" transform="translate(-10.556 -2.611)">
+        <path id="Path_17" d="M30 12v11.479" class="order-sidenav-icon" transform="translate(-12.705 -8.389)"/>
+        <path id="Path_18" d="M36.979 16.5H25.5" class="order-sidenav-icon" transform="translate(-13.944 -7.149)"/>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.248" height="16.789" viewBox="0 0 15.248 16.789">
+    <defs>
+        <style>
+            .order-sidenav-icon{fill:none;stroke:#fff;stroke-width:1.8px}
+        </style>
+    </defs>
+    <g id="Icon_feather-box" transform="translate(.9 .925)">
+        <path id="Path_4" d="M4.905 10.44l6.522 3.773 6.522-3.773" class="order-sidenav-icon" transform="translate(-4.703 -6.736)"/>
+        <path id="Path_5" d="M18 25.531V18" class="order-sidenav-icon" transform="translate(-11.276 -10.531)"/>
+        <path id="Path_3" d="M17.948 13.461V7.484a1.494 1.494 0 0 0-.748-1.292L11.971 3.2a1.494 1.494 0 0 0-1.494 0l-5.23 2.992A1.494 1.494 0 0 0 4.5 7.484v5.977a1.494 1.494 0 0 0 .747 1.292l5.23 2.988a1.494 1.494 0 0 0 1.494 0l5.23-2.988a1.494 1.494 0 0 0 .747-1.292z" class="order-sidenav-icon" transform="translate(-4.5 -3.003)"/>
+    </g>
+</svg>

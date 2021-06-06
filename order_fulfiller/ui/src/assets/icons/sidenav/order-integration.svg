@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.907" height="16.825" viewBox="0 0 15.907 16.825">
+    <defs>
+        <style>
+            .order-sidenav-icon,.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px}.order-sidenav-icon{stroke:#00b4d8}.cls-2{stroke:#03045e}
+        </style>
+    </defs>
+    <g id="Icon_feather-codesandbox" transform="translate(1.23 .925)">
+        <path id="Path_63" d="M11.25 6.315l3.362 1.942 3.362-1.942" class="order-sidenav-icon" transform="translate(-7.888 -4.665)"/>
+        <path id="Path_64" d="M7.862 23.82v-3.878L4.5 18" class="order-sidenav-icon" transform="translate(-4.5 -10.531)"/>
+        <path id="Path_65" d="M28.112 18l-3.362 1.942v3.878" class="order-sidenav-icon" transform="translate(-14.664 -10.531)"/>
+        <path id="Path_62" d="M17.948 13.461V7.484a1.494 1.494 0 0 0-.748-1.292L11.971 3.2a1.494 1.494 0 0 0-1.494 0l-5.23 2.992A1.494 1.494 0 0 0 4.5 7.484v5.977a1.494 1.494 0 0 0 .747 1.292l5.23 2.988a1.494 1.494 0 0 0 1.494 0l5.23-2.988a1.494 1.494 0 0 0 .747-1.292z" class="cls-2" transform="translate(-4.5 -3.003)"/>
+        <path id="Path_66" d="M4.905 10.44l6.522 3.773 6.522-3.773" class="cls-2" transform="translate(-4.703 -6.736)"/>
+        <path id="Path_67" d="M18 25.531V18" class="cls-2" transform="translate(-11.276 -10.531)"/>
+    </g>
+</svg>

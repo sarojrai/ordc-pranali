@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.756" height="15.756" viewBox="0 0 15.756 15.756">
+    <g stroke="#f6f6f6">
+        <path fill="#023e8a" stroke-width="0.2px" d="M7.778 0a7.778 7.778 0 1 0 7.778 7.778A7.8 7.8 0 0 0 7.778 0zm0 1.944a5.833 5.833 0 1 1-5.834 5.834 5.826 5.826 0 0 1 5.834-5.834z" transform="translate(.1 .1)"/>
+        <path fill="#18baff" stroke-width="0.3px" d="M6.563 3.75v5.284l.381.309 1.19 1.19.809.9 1.714-1.714-.9-.809-.809-.809V3.8H6.562z" transform="translate(.1 .1) translate(-.286 .184)"/>
+    </g>
+</svg>

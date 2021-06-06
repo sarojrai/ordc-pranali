@@ -1,0 +1,697 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$order-fulfiller-primary: mat-palette($mat-indigo);
+$order-fulfiller-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$order-fulfiller-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$order-fulfiller-theme: mat-light-theme((
+  color: (
+    primary: $order-fulfiller-primary,
+    accent: $order-fulfiller-accent,
+    warn: $order-fulfiller-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($order-fulfiller-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Define Typography
+// @font-face {
+//   font-family: "DMSans";
+//   src: url("assets/font/DM_Sans/DMSans-Regular.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "DMSans";
+//   src: url("assets/font/DM_Sans/DMSans-Bold.ttf") format("truetype");
+//   font-weight: bold;
+// }
+
+// @font-face {
+//   font-family: "DMSans";
+//   src: url("assets/font/DM_Sans/DMSans-Italic.ttf") format("truetype");
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: "DMSans";
+//   src: url("assets/font/DM_Sans/DMSans-BoldItalic.ttf") format("truetype");
+//   font-weight: bold;
+//   font-style: italic;
+// }
+
+@font-face {
+  font-family: "Lexend";
+  src: url("assets/font/Lexend/Lexend-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("assets/font/Lexend/Lexend-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+// @font-face {
+//   font-family: "Lexend";
+//   src: url("assets/font/Lexend/Lexend-Italic.ttf") format("truetype");
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: "DMSans";
+//   src: url("assets/font/DMLexend_Sans/Lexend-BoldItalic.ttf") format("truetype");
+//   font-weight: bold;
+//   font-style: italic;
+// }
+
+$order-typography: mat-typography-config(
+  $font-family: "Lexend, Roboto",
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($order-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+// /* For use in src/lib/core/theming/_palette.scss */
+// /* For use in src/lib/core/theming/_palette.scss */
+// $md-darkblue: (
+//   50: #e1e1ec,
+//   100: #b3b4cf,
+//   200: #8182af,
+//   300: #4f4f8e,
+//   400: #292a76,
+//   500: #03045e,
+//   600: #030356,
+//   700: #02034c,
+//   800: #020242,
+//   900: #010131,
+//   A100: #6969ff,
+//   A200: #3636ff,
+//   A400: #0303ff,
+//   A700: #0000e9,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #ffffff,
+//     400: #ffffff,
+//     500: #ffffff,
+//     600: #ffffff,
+//     700: #ffffff,
+//     800: #ffffff,
+//     900: #ffffff,
+//     A100: #ffffff,
+//     A200: #ffffff,
+//     A400: #ffffff,
+//     A700: #ffffff,
+//   ),
+// );
+
+// $md-lightblue: (
+//   50: #e1e8f1,
+//   100: #b3c5dc,
+//   200: #819fc5,
+//   300: #4e78ad,
+//   400: #285b9c,
+//   500: #023e8a,
+//   600: #023882,
+//   700: #013077,
+//   800: #01286d,
+//   900: #011b5a,
+//   A100: #8ba3ff,
+//   A200: #587aff,
+//   A400: #2551ff,
+//   A700: #0c3dff,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #ffffff,
+//     400: #ffffff,
+//     500: #ffffff,
+//     600: #ffffff,
+//     700: #ffffff,
+//     800: #ffffff,
+//     900: #ffffff,
+//     A100: #000000,
+//     A200: #ffffff,
+//     A400: #ffffff,
+//     A700: #ffffff,
+//   ),
+// );
+
+// $md-deepskyblue: (
+//   50: #e3f7ff,
+//   100: #baeaff,
+//   200: #8cddff,
+//   300: #5dcfff,
+//   400: #3bc4ff,
+//   500: #18baff,
+//   600: #15b3ff,
+//   700: #11abff,
+//   800: #0ea3ff,
+//   900: #0894ff,
+//   A100: #ffffff,
+//   A200: #f4faff,
+//   A400: #c1e2ff,
+//   A700: #a7d5ff,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #000000,
+//     400: #000000,
+//     500: #000000,
+//     600: #000000,
+//     700: #000000,
+//     800: #000000,
+//     900: #ffffff,
+//     A100: #000000,
+//     A200: #000000,
+//     A400: #000000,
+//     A700: #000000,
+//   ),
+// );
+
+// $md-slategrey: (
+//   50: #e8eaed,
+//   100: #c5cad1,
+//   200: #9ea7b2,
+//   300: #778393,
+//   400: #59697c,
+//   500: #3c4e65,
+//   600: #36475d,
+//   700: #2e3d53,
+//   800: #273549,
+//   900: #1a2537,
+//   A100: #7aa8ff,
+//   A200: #4787ff,
+//   A400: #1466ff,
+//   A700: #0057fa,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #000000,
+//     400: #ffffff,
+//     500: #ffffff,
+//     600: #ffffff,
+//     700: #ffffff,
+//     800: #ffffff,
+//     900: #ffffff,
+//     A100: #000000,
+//     A200: #000000,
+//     A400: #ffffff,
+//     A700: #ffffff,
+//   ),
+// );
+
+// $md-whitesmoke: (
+//   50: #fefefe,
+//   100: #fcfcfc,
+//   200: #fafafa,
+//   300: #f8f8f8,
+//   400: #f7f7f7,
+//   500: #f5f5f5,
+//   600: #f4f4f4,
+//   700: #f2f2f2,
+//   800: #f0f0f0,
+//   900: #eeeeee,
+//   A100: #ffffff,
+//   A200: #ffffff,
+//   A400: #ffffff,
+//   A700: #ffffff,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #000000,
+//     400: #000000,
+//     500: #000000,
+//     600: #000000,
+//     700: #000000,
+//     800: #000000,
+//     900: #000000,
+//     A100: #000000,
+//     A200: #000000,
+//     A400: #000000,
+//     A700: #000000,
+//   ),
+// );
+
+// $md-white: (
+//   50: #ffffff,
+//   100: #fefefe,
+//   200: #fdfdfd,
+//   300: #fcfcfc,
+//   400: #fcfcfc,
+//   500: #fbfbfb,
+//   600: #fafafa,
+//   700: #fafafa,
+//   800: #f9f9f9,
+//   900: #f8f8f8,
+//   A100: #ffffff,
+//   A200: #ffffff,
+//   A400: #ffffff,
+//   A700: #ffffff,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #000000,
+//     400: #000000,
+//     500: #000000,
+//     600: #000000,
+//     700: #000000,
+//     800: #000000,
+//     900: #000000,
+//     A100: #000000,
+//     A200: #000000,
+//     A400: #000000,
+//     A700: #000000,
+//   ),
+// );
+
+// $md-black: (
+//   50: #e0e0e0,
+//   100: #b3b3b3,
+//   200: #808080,
+//   300: #4d4d4d,
+//   400: #262626,
+//   500: #000000,
+//   600: #000000,
+//   700: #000000,
+//   800: #000000,
+//   900: #000000,
+//   A100: #a6a6a6,
+//   A200: #8c8c8c,
+//   A400: #737373,
+//   A700: #666666,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #ffffff,
+//     400: #ffffff,
+//     500: #ffffff,
+//     600: #ffffff,
+//     700: #ffffff,
+//     800: #ffffff,
+//     900: #ffffff,
+//     A100: #000000,
+//     A200: #000000,
+//     A400: #ffffff,
+//     A700: #ffffff,
+//   ),
+// );
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-deepblue: (
+    50 : #e2e4e9,
+    100 : #b6bdc8,
+    200 : #8691a3,
+    300 : #55647e,
+    400 : #304363,
+    500 : #0c2247,
+    600 : #0a1e40,
+    700 : #081937,
+    800 : #06142f,
+    900 : #030c20,
+    A100 : #5d7fff,
+    A200 : #2a57ff,
+    A400 : #0034f6,
+    A700 : #002edc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-green: (
+    50 : #eaf6e4,
+    100 : #cae9ba,
+    200 : #a6db8d,
+    300 : #82cd5f,
+    400 : #68c23c,
+    500 : #4db71a,
+    600 : #46b017,
+    700 : #3da713,
+    800 : #349f0f,
+    900 : #259008,
+    A100 : #c8ffbe,
+    A200 : #9dff8b,
+    A400 : #73ff58,
+    A700 : #5dff3e,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// $order-primary: mat-palette($md-darkblue);
+// $order-app-accent: mat-palette($md-lightblue);
+// $order-app-secondary: mat-palette($md-deepskyblue);
+// $order-app-slategrey: mat-palette($md-slategrey);
+// $order-app-whitesmoke: mat-palette($md-whitesmoke);
+// $order-app-white: mat-palette($md-white);
+// $order-app-black: mat-palette($md-black);
+
+$order-primary: mat-palette($md-deepblue);
+$order-app-accent: mat-palette($md-green);
+
+// The warn palette is optional (defaults to red).
+$order-app-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+$order-light-theme: mat-light-theme(
+  (
+    color: (
+      primary: $order-primary,
+      accent: $order-app-accent,
+      warn: $order-app-warn,
+    ),
+  )
+);
+
+// $order-dark-theme: mat-light-theme(
+//   (
+//     color: (
+//       primary: $order-primary,
+//       accent: $order-app-accent,
+//       warn: $order-app-warn,
+//       primary: $order-app-secondary,
+//       accent: $order-app-slategrey,
+//       whitesmoke: $order-app-whitesmoke,
+//       white: $order-app-white,
+//       black: $order-app-black,
+//     ),
+//   )
+// );
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($order-light-theme);
+
+html,
+body {
+  margin: 0%;
+  font-family: DMSans;
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  order-root {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .smaller-device-message {
+    display: none;
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      height: 100%;
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .mat-auto-complete-order-panel {
+    .select-deselect-all {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 0.5rem;
+      margin-bottom: 0.1rem;
+
+      button {
+        margin-left: 0.5rem;
+      }
+
+      .mat-accent {
+        color: #ffffff;
+      }
+
+      .selected-item {
+        .mat-checkbox-layout .mat-checkbox-label {
+          color: #023e8a;
+          font-weight: 500;
+        }
+      }
+
+      .unselected-item {
+        .mat-checkbox-layout .mat-checkbox-label {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .mat-auto-complete-order-panel.horizontal-option {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .select-deselect-all {
+      flex-basis: 100%;
+    }
+    .mat-option {
+      flex-basis: 30%;
+      margin-left: 1rem;
+    }
+  }
+
+  .mat-form-field .mat-icon {
+    height: 1.125rem;
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  .mat-form-field {
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0;
+
+    &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+    &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+    &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap {
+      border-width: 0.025rem;
+    }
+
+    &.mat-form-field-appearance-outline:not(.mat-form-field-disabled)
+      .mat-form-field-flex:hover
+      .mat-form-field-outline-thick {
+      opacity: 0.5;
+    }
+
+    .mat-form-field-outline {
+      background-color: #fff;
+    }
+    // .mat-form-field-outline-start,
+    // .mat-form-field-outline-end {
+    //   // border-radius: 0;
+    // }
+    .mat-form-field-infix {
+      border-top: 0.5rem solid transparent;
+      padding: 0.5rem 0;
+    }
+    // .mat-form-field-suffix {
+    //   & span {
+    //   }
+    // }
+  }
+
+  .mat-form-field.text-suffix {
+    .mat-form-field-suffix {
+      top: -0.07rem;
+    }
+  }
+
+  .mat-radio-button.mat-primary.mat-radio-checked {
+    .mat-radio-outer-circle {
+      background-color: #023e8a;
+    }
+    .mat-radio-inner-circle {
+      background-color: #fff;
+    }
+  }
+
+  .mat-radio-button.mat-primary {
+    .mat-radio-outer-circle {
+      background-color: #f5f5f5;
+    }
+    .mat-radio-inner-circle {
+      background-color: #fff;
+    }
+  }
+
+  // .mat-button,
+  // .mat-icon-button,
+  // .mat-stroked-button,
+  // .mat-flat-button,
+  // .mat-raised-button {
+  //   border-radius: 0;
+  // }
+
+  .success-snackbar {
+    background-color: #18baff;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .error-snackbar {
+    background-color: #f44336;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 2.8rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #023e8a;
+    border-radius: 6px;
+    border: 3px solid #023e8a;
+  }
+
+  // custom dropdown
+  mat-select.list-custom {
+    .mat-select-trigger {
+      .mat-select-value {
+        .mat-select-value-text {
+          // color: #023e8a;
+          font-weight: 500;
+        }
+      }
+      .mat-select-arrow-wrapper {
+        .mat-select-arrow {
+          border-left: 0;
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  mat-form-field.custom-mat-select {
+    .mat-form-field-suffix {
+      top: -0.1rem;
+      .mat-icon {
+        height: 0.5rem;
+      }
+    }
+    // .mat-form-field-prefix {
+    //   top: -0.2rem;
+    //   .mat-icon {
+    //     height: 0.5rem;
+    //   }
+    // }
+  }
+
+  .order-timepicker {
+    .timepicker__header {
+      background-color: #023e8a;
+    }
+    .timepicker-dial__item_active {
+      color: #fff;
+    }
+    .clock-face__clock-hand {
+      background-color: #023e8a;
+      &::after {
+        background-color: #023e8a;
+      }
+
+      &::before {
+        border-color: #023e8a;
+      }
+    }
+    .clock-face__number {
+      > span.active {
+        background-color: #023e8a !important;
+      }
+    }
+    button:not(.timepicker-dial__item) {
+      color: #023e8a;
+    }
+  }
+
+  .mat-slide-toggle.toggle-text-between {
+    margin-left: 1rem;
+    height: 1.1rem;
+    &.mat-checked .mat-slide-toggle-bar::after,
+    &:not(.mat-checked) .mat-slide-toggle-bar::after {
+      font-size: 50%;
+      font-weight: 700;
+      color: #fff;
+      position: absolute;
+      top: -0.25rem;
+    }
+    &.mat-checked .mat-slide-toggle-bar::after {
+      content: "ON";
+      left: 0.25rem;
+    }
+    &:not(.mat-checked) .mat-slide-toggle-bar::after {
+      content: "OFF";
+      left: 1.25rem;
+    }
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

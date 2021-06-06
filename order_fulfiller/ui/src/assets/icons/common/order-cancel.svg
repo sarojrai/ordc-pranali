@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.407" height="15.407" viewBox="0 0 15.407 15.407">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#e90543;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="Group_506" transform="translate(1.414 1.414)">
+        <g id="Group_411">
+            <path id="Path_1" d="M0 0v17.789" class="cls-1" transform="rotate(-45)"/>
+            <path id="Path_2" d="M0 0h17.789" class="cls-1" transform="rotate(-45 15.184 6.29)"/>
+        </g>
+    </g>
+</svg>

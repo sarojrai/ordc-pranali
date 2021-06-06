@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.917" height="14.95" viewBox="0 0 17.917 14.95">
+    <defs>
+        <style>
+            .order-sidenav-icon{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6px}
+        </style>
+    </defs>
+    <g id="Icon_feather-truck" transform="translate(.8 .8)">
+        <path id="Path_107" d="M1.5 4.5h11.125v9.642H1.5z" class="order-sidenav-icon" transform="translate(-1.5 -4.5)"/>
+        <path id="Path_108" d="M24 12h2.967l2.225 2.225v3.708H24z" class="order-sidenav-icon" transform="translate(-12.875 -8.292)"/>
+        <path id="Path_109" d="M8.208 25.854A1.854 1.854 0 1 1 6.354 24a1.854 1.854 0 0 1 1.854 1.854z" class="order-sidenav-icon" transform="translate(-3.017 -14.358)"/>
+        <path id="Path_110" d="M27.708 25.854A1.854 1.854 0 1 1 25.854 24a1.854 1.854 0 0 1 1.854 1.854z" class="order-sidenav-icon" transform="translate(-12.875 -14.358)"/>
+    </g>
+</svg>
